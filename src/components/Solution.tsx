@@ -1,4 +1,4 @@
-﻿'use client'
+'use client'
 
 import { useState, useEffect, useRef } from 'react'
 import { motion, useInView } from 'framer-motion'
@@ -39,7 +39,7 @@ const flowSteps = [
 const stats = [
   { value: '8', suffix: 's', label: 'Generation time' },
   { value: '100', suffix: '%', label: 'Accurate every time' },
-  { value: 'âˆž', suffix: '', label: 'Always up to date' },
+  { value: '∞', suffix: '', label: 'Always up to date' },
 ]
 
 function StatCounter({ value, suffix, label }: { value: string; suffix: string; label: string }) {
@@ -123,7 +123,7 @@ export default function Solution() {
             </h2>
             <p className="text-ink-dim text-lg leading-relaxed">
               Our AI software connects to your database and generates perfect
-              quotations in seconds â€” accurate, branded, and client-ready.
+              quotations in seconds — accurate, branded, and client-ready.
             </p>
           </motion.div>
 

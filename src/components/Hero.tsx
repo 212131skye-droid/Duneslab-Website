@@ -1,4 +1,4 @@
-﻿'use client'
+'use client'
 
 import Link from 'next/link'
 import { motion } from 'framer-motion'
@@ -62,7 +62,7 @@ export default function Hero() {
               variants={item}
               className="text-ink-faint text-xs tracking-[0.25em] uppercase font-display mb-8"
             >
-              Premium AI Software Â· Netherlands
+              Premium AI Software · Netherlands
             </motion.p>
 
             {/* Headline */}
@@ -85,7 +85,7 @@ export default function Hero() {
               workflows and drives results.
             </motion.p>
 
-            {/* CTAs â€” side by side */}
+            {/* CTAs — side by side */}
             <motion.div
               variants={item}
               className="flex flex-row gap-4 mb-14 flex-wrap"
@@ -94,7 +94,7 @@ export default function Hero() {
                 href="/contact"
                 className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-gold text-void font-display font-bold text-sm tracking-[0.12em] uppercase transition-colors hover:bg-gold-bright"
               >
-                Book a demo â†’
+                Book a demo →
               </Link>
               <Link
                 href="/how-it-works"

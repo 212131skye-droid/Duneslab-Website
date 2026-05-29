@@ -1,4 +1,4 @@
-﻿'use client'
+'use client'
 
 import { motion } from 'framer-motion'
 import { Clock, AlertTriangle, TrendingDown } from 'lucide-react'
@@ -18,7 +18,7 @@ const painPoints = [
     icon: Clock,
     title: 'Hours wasted',
     description:
-      'Manual quotation creation takes 2â€“4 hours per client. Your sales team spends more time formatting than closing.',
+      'Manual quotation creation takes 2–4 hours per client. Your sales team spends more time formatting than closing.',
   },
   {
     icon: AlertTriangle,

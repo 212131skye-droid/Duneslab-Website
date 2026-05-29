@@ -1,4 +1,4 @@
-﻿'use client'
+'use client'
 
 import { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
@@ -18,7 +18,7 @@ const faqs = [
   {
     question: 'What systems can you integrate with?',
     answer:
-      'Duneslab integrates with most common ERP and database systems including SAP, Microsoft Dynamics, Exact, Salesforce and custom SQL databases. If you use a different system, reach out â€” we handle custom integrations on a case-by-case basis.',
+      'Duneslab integrates with most common ERP and database systems including SAP, Microsoft Dynamics, Exact, Salesforce and custom SQL databases. If you use a different system, reach out — we handle custom integrations on a case-by-case basis.',
   },
   {
     question: 'How long does implementation take?',
@@ -33,7 +33,7 @@ const faqs = [
   {
     question: 'Can I cancel anytime?',
     answer:
-      'Our standard contracts have a minimum term of 12 months. After that, you can cancel with 30 days notice. We are transparent about this upfront â€” no lock-ins beyond the initial term.',
+      'Our standard contracts have a minimum term of 12 months. After that, you can cancel with 30 days notice. We are transparent about this upfront — no lock-ins beyond the initial term.',
   },
   {
     question: 'Do you offer a demo?',

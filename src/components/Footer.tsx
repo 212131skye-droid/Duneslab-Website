@@ -1,4 +1,4 @@
-﻿'use client'
+'use client'
 
 import Link from 'next/link'
 import { motion } from 'framer-motion'
@@ -118,7 +118,7 @@ export default function Footer() {
         {/* Bottom bar */}
         <div className="py-6 border-t border-edge flex flex-col sm:flex-row items-center justify-between gap-4">
           <p className="text-xs" style={{ color: '#6A6A6A' }}>
-            Â© 2026 Duneslab. All rights reserved.
+            © 2026 Duneslab. All rights reserved.
           </p>
           <p className="text-xs" style={{ color: '#6A6A6A' }}>
             Built by{' '}

@@ -1,4 +1,4 @@
-﻿'use client'
+'use client'
 
 import { motion } from 'framer-motion'
 import { Check } from 'lucide-react'
@@ -16,9 +16,9 @@ const stagger = {
 const plans = [
   {
     name: 'Starter',
-    price: 'â‚¬595',
+    price: '€595',
     period: '/mo',
-    setup: '+ â‚¬9.500 one-time setup',
+    setup: '+ €9.500 one-time setup',
     description: 'Everything you need to automate quotation generation.',
     featured: false,
     features: [
@@ -33,9 +33,9 @@ const plans = [
   },
   {
     name: 'Professional',
-    price: 'â‚¬790',
+    price: '€790',
     period: '/mo',
-    setup: '+ â‚¬9.500 one-time setup',
+    setup: '+ €9.500 one-time setup',
     description: 'Priority support and advanced analytics for growing teams.',
     featured: true,
     features: [
@@ -53,7 +53,7 @@ const plans = [
     name: 'Enterprise',
     price: 'Custom',
     period: '',
-    setup: '+ â‚¬3.500 integration fee',
+    setup: '+ €3.500 integration fee',
     description: 'Full integration, dedicated onboarding and SLA guarantees.',
     featured: false,
     features: [
@@ -166,7 +166,7 @@ export default function Pricing() {
                       : 'border border-gold-muted text-ink hover:bg-[rgba(231,208,95,0.07)]'
                   }`}
                 >
-                  {plan.cta} â†’
+                  {plan.cta} →
                 </a>
               </motion.div>
             ))}

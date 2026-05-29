@@ -1,4 +1,4 @@
-﻿'use client'
+'use client'
 
 import { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
@@ -20,9 +20,9 @@ const stagger = {
 const plans = [
   {
     name: 'Starter',
-    price: 'â‚¬595',
+    price: '€595',
     period: '/mo',
-    setup: '+ â‚¬9.500 one-time setup',
+    setup: '+ €9.500 one-time setup',
     description: 'Everything you need to automate quotation generation.',
     featured: false,
     features: [
@@ -37,9 +37,9 @@ const plans = [
   },
   {
     name: 'Professional',
-    price: 'â‚¬790',
+    price: '€790',
     period: '/mo',
-    setup: '+ â‚¬9.500 one-time setup',
+    setup: '+ €9.500 one-time setup',
     description: 'Priority support and advanced analytics for growing teams.',
     featured: true,
     features: [
@@ -57,7 +57,7 @@ const plans = [
     name: 'Enterprise',
     price: 'Custom',
     period: '',
-    setup: '+ â‚¬3.500 integration fee',
+    setup: '+ €3.500 integration fee',
     description: 'Full integration, dedicated onboarding and SLA guarantees.',
     featured: false,
     features: [
@@ -76,12 +76,12 @@ const pricingFaqs = [
   {
     question: 'What is included in the one-time setup fee?',
     answer:
-      'The setup fee covers initial integration with your product database or ERP system, configuration of your PDF templates and pricing logic, team onboarding and training, and a full QA round before go-live. It is a one-time investment â€” no recurring charges for setup work.',
+      'The setup fee covers initial integration with your product database or ERP system, configuration of your PDF templates and pricing logic, team onboarding and training, and a full QA round before go-live. It is a one-time investment — no recurring charges for setup work.',
   },
   {
     question: 'Can I change plans later?',
     answer:
-      'Yes. You can upgrade from Starter to Professional at any time â€” the price difference is prorated from your next billing cycle. Downgrading is available at the end of your contract term.',
+      'Yes. You can upgrade from Starter to Professional at any time — the price difference is prorated from your next billing cycle. Downgrading is available at the end of your contract term.',
   },
   {
     question: 'What does the minimum 12-month contract include?',
@@ -231,7 +231,7 @@ export default function PricingPage() {
                         : 'border border-gold-muted text-ink hover:bg-[rgba(231,208,95,0.07)]'
                     }`}
                   >
-                    {plan.cta} â†’
+                    {plan.cta} →
                   </Link>
                 </motion.div>
               ))}
@@ -295,7 +295,7 @@ export default function PricingPage() {
       <CTAStrip
         heading="Ready to get started?"
         subtext="Book a free 30-minute demo and see the platform live. No commitment required."
-        buttonLabel="Book a demo â†’"
+        buttonLabel="Book a demo →"
         buttonHref="/contact"
         secondaryLabel="View solutions"
         secondaryHref="/solutions"

@@ -1,4 +1,4 @@
-﻿'use client'
+'use client'
 
 import Link from 'next/link'
 import { motion } from 'framer-motion'
@@ -20,7 +20,7 @@ const services = [
     tag: 'FLAGSHIP',
     title: 'AI Software & SaaS',
     description:
-      'Custom AI-powered software that automates your core business processes. From intelligent quotation tools to full workflow automation â€” built for B2B enterprises that demand speed and precision.',
+      'Custom AI-powered software that automates your core business processes. From intelligent quotation tools to full workflow automation — built for B2B enterprises that demand speed and precision.',
     featured: true,
   },
   {
@@ -36,7 +36,7 @@ const services = [
     tag: 'DIGITAL',
     title: 'Web Design',
     description:
-      'Professional, conversion-focused websites. Clean code, fast loading, and built to grow your business online. No templates â€” every site is designed from the ground up.',
+      'Professional, conversion-focused websites. Clean code, fast loading, and built to grow your business online. No templates — every site is designed from the ground up.',
     featured: false,
   },
 ]
@@ -128,7 +128,7 @@ export default function Services() {
                         : 'text-ink-dim hover:text-gold'
                     }`}
                   >
-                    Learn more â†’
+                    Learn more →
                   </Link>
                 </div>
               </motion.div>

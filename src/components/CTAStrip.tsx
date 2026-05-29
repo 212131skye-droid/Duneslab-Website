@@ -1,4 +1,4 @@
-﻿'use client'
+'use client'
 
 import Link from 'next/link'
 import { motion } from 'framer-motion'
@@ -15,7 +15,7 @@ interface CTAStripProps {
 export default function CTAStrip({
   heading = 'Ready to get started?',
   subtext = 'Book a free 30-minute demo and see the tool in action. No commitment, no sales pressure.',
-  buttonLabel = 'Book a demo â†’',
+  buttonLabel = 'Book a demo →',
   buttonHref = '/contact',
   secondaryLabel,
   secondaryHref,

@@ -1,4 +1,4 @@
-﻿'use client'
+'use client'
 
 import Link from 'next/link'
 import { motion } from 'framer-motion'
@@ -65,7 +65,7 @@ export default function CTASection() {
             className="text-ink-dim text-lg lg:text-xl max-w-xl mx-auto mb-12"
           >
             Book a free 30-minute demo and see the tool in action. No
-            commitment, no sales pressure â€” just results.
+            commitment, no sales pressure — just results.
           </motion.p>
 
           <motion.div
@@ -76,7 +76,7 @@ export default function CTASection() {
               href="/contact"
               className="inline-flex items-center justify-center gap-2 px-10 py-5 bg-gold text-void font-display font-bold text-sm tracking-[0.12em] uppercase transition-colors hover:bg-gold-bright"
             >
-              Book a demo â†’
+              Book a demo →
             </Link>
             <Link
               href="/pricing"

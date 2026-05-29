@@ -1,4 +1,4 @@
-﻿'use client'
+'use client'
 
 import Link from 'next/link'
 import { motion } from 'framer-motion'
@@ -18,7 +18,7 @@ const steps = [
     number: '01',
     title: 'Connect',
     description:
-      'We integrate with your existing product database, ERP system or price list. No restructuring required â€” we work with what you have.',
+      'We integrate with your existing product database, ERP system or price list. No restructuring required — we work with what you have.',
   },
   {
     number: '02',
@@ -65,7 +65,7 @@ export default function HowItWorks() {
 
           {/* Steps */}
           <div className="relative">
-            {/* Connecting line â€” desktop only */}
+            {/* Connecting line — desktop only */}
             <div
               className="hidden xl:block absolute h-px pointer-events-none"
               style={{
@@ -105,14 +105,14 @@ export default function HowItWorks() {
           >
             <p className="text-ink-dim text-base max-w-md">
               Implementation typically takes{' '}
-              <span className="text-ink font-semibold">2â€“4 weeks</span>. We
+              <span className="text-ink font-semibold">2–4 weeks</span>. We
               handle onboarding, integration and training end-to-end.
             </p>
             <Link
               href="/contact"
               className="shrink-0 px-8 py-4 bg-gold text-void font-display font-bold text-sm tracking-[0.12em] uppercase transition-colors hover:bg-gold-bright"
             >
-              Book a demo â†’
+              Book a demo →
             </Link>
           </motion.div>
         </motion.div>

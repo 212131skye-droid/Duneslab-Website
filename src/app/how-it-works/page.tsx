@@ -1,4 +1,4 @@
-﻿'use client'
+'use client'
 
 import { motion } from 'framer-motion'
 import { Database, Zap, FileText, Send, Server, Code, Globe, Check } from 'lucide-react'
@@ -22,10 +22,10 @@ const steps = [
     title: 'Connect',
     subtitle: 'We integrate with your data',
     description:
-      'Duneslab connects directly to your product database, ERP system, or price list. No restructuring required â€” we work with your existing data structure, whether that is a cloud ERP, a local SQL server, or a shared spreadsheet.',
+      'Duneslab connects directly to your product database, ERP system, or price list. No restructuring required — we work with your existing data structure, whether that is a cloud ERP, a local SQL server, or a shared spreadsheet.',
     details: [
       'Compatible with all major ERP and database systems',
-      'Secure read-only connection â€” we never modify your data',
+      'Secure read-only connection — we never modify your data',
       'Live sync: price and stock changes reflect instantly in quotes',
       'Typically completed in the first week of implementation',
     ],
@@ -50,7 +50,7 @@ const steps = [
     title: 'Generate',
     subtitle: 'Quotes in under 10 seconds',
     description:
-      'Your sales team opens the Duneslab interface, selects products and quantities, and clicks generate. The AI engine applies all configured rules and produces a complete, accurate, client-ready quotation â€” in under 10 seconds.',
+      'Your sales team opens the Duneslab interface, selects products and quantities, and clicks generate. The AI engine applies all configured rules and produces a complete, accurate, client-ready quotation — in under 10 seconds.',
     details: [
       'Clean, intuitive product selection interface',
       'Live price validation as products are selected',
@@ -389,7 +389,7 @@ export default function HowItWorksPage() {
       <CTAStrip
         heading="Ready to see it in action?"
         subtext="Book a free 30-minute demo. We'll show you the full flow live, with your type of products."
-        buttonLabel="Book a demo â†’"
+        buttonLabel="Book a demo →"
         buttonHref="/contact"
         secondaryLabel="View pricing"
         secondaryHref="/pricing"
