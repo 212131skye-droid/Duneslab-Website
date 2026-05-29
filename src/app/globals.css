@@ -1,26 +1,38 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@theme {
+  --color-void: #050505;
+  --color-surface: #111111;
+  --color-edge: #232323;
+  --color-gold: #E7D05F;
+  --color-gold-muted: #D9B04D;
+  --color-gold-bright: #FFF27A;
+  --color-ink: #F5F5F5;
+  --color-ink-dim: #9A9A9A;
+  --color-ink-faint: #6A6A6A;
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --font-display: var(--font-sora);
+  --font-sans: var(--font-inter);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 80px;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--color-void);
+  color: var(--color-ink);
+  background-image: url('/hero-bg.png');
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: right center;
+  background-repeat: no-repeat;
+}
+
+::selection {
+  background-color: var(--color-gold);
+  color: var(--color-void);
 }
