@@ -1,4 +1,4 @@
-'use client'
+﻿'use client'
 
 import { useState } from 'react'
 import { motion } from 'framer-motion'
@@ -191,6 +191,9 @@ export default function ContactPage() {
                   <p className="text-ink-faint text-xs pt-2">
                     This opens your email client with the message pre-filled. Hit send to submit.
                   </p>
+                  <p className="text-ink-faint text-xs">
+                    Wij reageren binnen 24 uur op werkdagen.
+                  </p>
                 </form>
               )}
             </motion.div>
@@ -199,7 +202,7 @@ export default function ContactPage() {
             <motion.div variants={fadeUp} className="lg:col-span-5 space-y-10">
               {/* Contact details */}
               <div>
-                <p className="text-gold text-xs tracking-[0.25em] uppercase font-display mb-6">
+                <p className="text-gold text-xs tracking-widest uppercase font-display mb-6">
                   Direct contact
                 </p>
                 <div className="flex flex-col gap-4">
@@ -234,7 +237,7 @@ export default function ContactPage() {
 
               {/* What happens next */}
               <div>
-                <p className="text-gold text-xs tracking-[0.25em] uppercase font-display mb-6">
+                <p className="text-gold text-xs tracking-widest uppercase font-display mb-6">
                   What happens next
                 </p>
                 <div className="flex flex-col gap-6">
@@ -275,4 +278,5 @@ export default function ContactPage() {
     </>
   )
 }
+
 

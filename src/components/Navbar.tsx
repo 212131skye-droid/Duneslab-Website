@@ -20,14 +20,9 @@ function Logo() {
       <svg width="22" height="20" viewBox="0 0 22 20" fill="none" aria-hidden="true">
         <polygon points="11,1 21,19 1,19" fill="#E7D05F" />
       </svg>
-      <div className="flex flex-col leading-none">
-        <span className="font-display font-bold text-sm tracking-[0.22em] text-ink uppercase">
-          DUNES
-        </span>
-        <span className="font-display font-semibold text-[10px] tracking-[0.3em] text-gold uppercase">
-          LABS
-        </span>
-      </div>
+      <span className="font-display font-bold text-sm tracking-[0.22em] text-ink uppercase">
+        DUNESLAB
+      </span>
     </Link>
   )
 }

@@ -1,4 +1,4 @@
-'use client'
+﻿'use client'
 
 import Link from 'next/link'
 import { motion } from 'framer-motion'
@@ -46,7 +46,7 @@ export default function CTASection() {
         >
           <motion.p
             variants={fadeUp}
-            className="text-gold text-xs tracking-[0.25em] uppercase font-display mb-6"
+            className="text-gold text-xs tracking-widest uppercase font-display mb-6"
           >
             Get started
           </motion.p>
@@ -100,4 +100,5 @@ export default function CTASection() {
     </section>
   )
 }
+
 

@@ -1,4 +1,4 @@
-'use client'
+﻿'use client'
 
 import Link from 'next/link'
 import { motion } from 'framer-motion'
@@ -57,7 +57,7 @@ export default function Services() {
         >
           {/* Heading */}
           <motion.div variants={fadeUp} className="max-w-xl mb-16 lg:mb-20">
-            <p className="text-gold text-xs tracking-[0.25em] uppercase font-display mb-5">
+            <p className="text-gold text-xs tracking-widest uppercase font-display mb-5">
               Services
             </p>
             <h2 className="font-display font-bold text-4xl lg:text-5xl xl:text-6xl text-ink leading-tight">
@@ -65,68 +65,69 @@ export default function Services() {
             </h2>
           </motion.div>
 
-          {/* Service cards */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
-            {services.map(({ icon: Icon, tag, title, description, featured }) => (
+          {/* Featured card — AI Software, full width */}
+          {(() => {
+            const { icon: Icon, tag, title, description } = services[0]
+            return (
+              <motion.div
+                variants={fadeUp}
+                whileHover={{ scale: 1.005 }}
+                transition={{ type: 'spring', stiffness: 300, damping: 25 }}
+                className="group relative flex flex-col lg:flex-row lg:items-center gap-10 p-10 lg:p-12 border border-gold-muted hover:border-gold bg-surface mb-5 transition-colors duration-300"
+                style={{ boxShadow: '0 0 60px rgba(231,208,95,0.12)' }}
+              >
+                <div className="absolute top-0 left-0 right-0 h-px bg-gold" />
+
+                <div className="flex-1">
+                  <span className="inline-block font-display font-bold text-[9px] tracking-[0.28em] uppercase px-2 py-1 mb-6 text-void bg-gold">
+                    {tag}
+                  </span>
+                  <div className="flex items-center gap-3 mb-4">
+                    <Icon size={28} className="text-gold" strokeWidth={1.5} />
+                    <h3 className="font-display font-bold text-2xl lg:text-3xl text-ink">{title}</h3>
+                  </div>
+                  <p className="text-ink-dim text-base leading-relaxed max-w-2xl">{description}</p>
+                </div>
+
+                <div className="shrink-0">
+                  <Link
+                    href="/solutions"
+                    className="inline-flex items-center gap-2 px-8 py-4 bg-gold text-void font-display font-bold text-sm tracking-wide uppercase transition-colors hover:bg-gold-bright"
+                  >
+                    Learn more →
+                  </Link>
+                </div>
+              </motion.div>
+            )
+          })()}
+
+          {/* Secondary cards — 2-col */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+            {services.slice(1).map(({ icon: Icon, tag, title, description }) => (
               <motion.div
                 key={title}
                 variants={fadeUp}
                 whileHover={{ scale: 1.02 }}
                 transition={{ type: 'spring', stiffness: 300, damping: 25 }}
-                className={`group relative flex flex-col p-8 border transition-colors duration-300 bg-surface ${
-                  featured
-                    ? 'border-gold-muted hover:border-gold'
-                    : 'border-edge hover:border-gold'
-                }`}
-                style={
-                  featured
-                    ? { boxShadow: '0 0 30px rgba(231,208,95,0.10)' }
-                    : undefined
-                }
+                className="group relative flex flex-col p-8 border border-edge hover:border-gold bg-surface transition-colors duration-300"
               >
-                {/* Gold top border */}
-                <div
-                  className={`absolute top-0 left-0 right-0 h-px transition-opacity duration-300 ${
-                    featured
-                      ? 'bg-gold opacity-100'
-                      : 'bg-gold opacity-0 group-hover:opacity-100'
-                  }`}
-                />
+                <div className="absolute top-0 left-0 right-0 h-px bg-gold opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
 
-                {/* Tag */}
-                <span
-                  className={`self-start font-display font-bold text-[9px] tracking-[0.28em] uppercase px-2 py-1 mb-6 ${
-                    featured
-                      ? 'text-void bg-gold'
-                      : 'text-gold border border-gold-muted'
-                  }`}
-                >
+                <span className="self-start font-display font-bold text-[9px] tracking-[0.28em] uppercase px-2 py-1 mb-6 text-gold border border-gold-muted">
                   {tag}
                 </span>
 
                 <div className="mb-5">
-                  <Icon
-                    size={24}
-                    className={featured ? 'text-gold' : 'text-ink-dim group-hover:text-gold transition-colors duration-300'}
-                    strokeWidth={1.5}
-                  />
+                  <Icon size={24} className="text-ink-dim group-hover:text-gold transition-colors duration-300" strokeWidth={1.5} />
                 </div>
 
-                <h3 className="font-display font-bold text-xl lg:text-2xl text-ink mb-4">
-                  {title}
-                </h3>
-                <p className="text-ink-dim text-sm leading-relaxed flex-1">
-                  {description}
-                </p>
+                <h3 className="font-display font-bold text-xl lg:text-2xl text-ink mb-4">{title}</h3>
+                <p className="text-ink-dim text-sm leading-relaxed flex-1">{description}</p>
 
                 <div className="mt-8 pt-6 border-t border-edge">
                   <Link
-                    href="/contact"
-                    className={`font-display font-semibold text-sm tracking-wide transition-colors ${
-                      featured
-                        ? 'text-gold hover:text-gold-bright'
-                        : 'text-ink-dim hover:text-gold'
-                    }`}
+                    href="/solutions"
+                    className="font-display font-semibold text-sm tracking-wide text-ink-dim hover:text-gold transition-colors"
                   >
                     Learn more →
                   </Link>
@@ -139,4 +140,5 @@ export default function Services() {
     </section>
   )
 }
+
 

@@ -10,6 +10,7 @@
   --color-ink: #F5F5F5;
   --color-ink-dim: #9A9A9A;
   --color-ink-faint: #6A6A6A;
+  --tracking-widest: 0.25em;
 }
 
 @theme inline {

@@ -20,7 +20,7 @@ export default function PageHero({ label, heading, subtext }: PageHeroProps) {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.75, ease: [0.16, 1, 0.3, 1] as const }}
         >
-          <p className="text-gold text-xs tracking-[0.25em] uppercase font-display mb-5">
+          <p className="text-gold text-xs tracking-widest uppercase font-display mb-5">
             {label}
           </p>
           <h1 className="font-display font-bold text-5xl lg:text-6xl xl:text-7xl text-ink leading-[0.95] tracking-tight mb-6 max-w-3xl">
@@ -36,4 +36,5 @@ export default function PageHero({ label, heading, subtext }: PageHeroProps) {
     </section>
   )
 }
+
 

@@ -1,4 +1,4 @@
-'use client'
+﻿'use client'
 
 import Link from 'next/link'
 import { motion } from 'framer-motion'
@@ -26,7 +26,7 @@ export default function Hero() {
         background: '#050505',
         backgroundImage: "url('/hero-bg.png')",
         backgroundSize: 'cover',
-        backgroundPosition: 'right center',
+        backgroundPosition: 'calc(100% + 100px) center',
         backgroundRepeat: 'no-repeat',
       }}
     >
@@ -44,23 +44,23 @@ export default function Hero() {
         className="absolute inset-0"
         style={{
           background:
-            'linear-gradient(to right, #050505 38%, rgba(5,5,5,0.75) 65%, rgba(5,5,5,0.15) 100%)',
+            'linear-gradient(to right, #050505 50%, transparent 80%)',
         }}
       />
 
       {/* Content */}
       <div className="relative z-10 h-full flex items-center">
-        <div className="max-w-7xl mx-auto px-6 lg:px-12 w-full pt-20">
+        <div className="max-w-7xl mx-auto pl-16 lg:pl-24 xl:pl-32 pr-6 lg:pr-12 w-full pt-20">
           <motion.div
             variants={container}
             initial="hidden"
             animate="show"
-            className="max-w-[600px]"
+            className="max-w-lg"
           >
             {/* Eyebrow */}
             <motion.p
               variants={item}
-              className="text-ink-faint text-xs tracking-[0.25em] uppercase font-display mb-8"
+              className="text-ink-faint text-xs tracking-widest uppercase font-display mb-8"
             >
               Premium AI Software · Netherlands
             </motion.p>
@@ -81,14 +81,13 @@ export default function Hero() {
               variants={item}
               className="text-ink-dim text-lg lg:text-xl max-w-[480px] mb-10 leading-relaxed"
             >
-              Duneslab builds intelligent software that automates complex
-              workflows and drives results.
+              We build AI software that saves your team hours every single day.
             </motion.p>
 
             {/* CTAs — side by side */}
             <motion.div
               variants={item}
-              className="flex flex-row gap-4 mb-14 flex-wrap"
+              className="flex flex-col sm:flex-row gap-4 mb-14"
             >
               <Link
                 href="/contact"
@@ -106,7 +105,7 @@ export default function Hero() {
 
             {/* Social proof */}
             <motion.div variants={item}>
-              <p className="text-ink-faint text-[10px] tracking-[0.25em] uppercase mb-4">
+              <p className="text-ink-faint text-[10px] tracking-widest uppercase mb-4">
                 Trusted by industry leaders
               </p>
               <div className="flex flex-wrap gap-6 sm:gap-10">
@@ -126,4 +125,5 @@ export default function Hero() {
     </section>
   )
 }
+
 

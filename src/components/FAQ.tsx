@@ -1,4 +1,4 @@
-'use client'
+﻿'use client'
 
 import { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
@@ -115,7 +115,7 @@ export default function FAQ() {
             transition={{ duration: 0.65, ease: [0.16, 1, 0.3, 1] as const }}
             className="lg:col-span-4"
           >
-            <p className="text-gold text-xs tracking-[0.25em] uppercase font-display mb-5">
+            <p className="text-gold text-xs tracking-widest uppercase font-display mb-5">
               FAQ
             </p>
             <h2 className="font-display font-bold text-4xl lg:text-5xl text-ink leading-tight mb-6">
@@ -155,4 +155,5 @@ export default function FAQ() {
     </section>
   )
 }
+
 

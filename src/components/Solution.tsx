@@ -1,4 +1,4 @@
-'use client'
+﻿'use client'
 
 import { useState, useEffect, useRef } from 'react'
 import { motion, useInView } from 'framer-motion'
@@ -115,7 +115,7 @@ export default function Solution() {
         >
           {/* Heading */}
           <motion.div variants={fadeUp} className="max-w-2xl mb-16 lg:mb-20">
-            <p className="text-gold text-xs tracking-[0.25em] uppercase font-display mb-5">
+            <p className="text-gold text-xs tracking-widest uppercase font-display mb-5">
               The Solution
             </p>
             <h2 className="font-display font-bold text-4xl lg:text-5xl xl:text-6xl text-ink leading-tight mb-6">
@@ -155,7 +155,7 @@ export default function Solution() {
                         strokeWidth={1.5}
                       />
                       <span
-                        className={`font-display font-bold text-[10px] tracking-[0.25em] uppercase ${
+                        className={`font-display font-bold text-[10px] tracking-widest uppercase ${
                           step.featured ? 'text-gold' : 'text-ink-faint'
                         }`}
                       >
@@ -196,4 +196,5 @@ export default function Solution() {
     </section>
   )
 }
+
 

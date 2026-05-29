@@ -1,4 +1,4 @@
-'use client'
+﻿'use client'
 
 import { motion } from 'framer-motion'
 import { Database, Zap, FileText, Send, Server, Code, Globe, Check } from 'lucide-react'
@@ -220,7 +220,7 @@ export default function HowItWorksPage() {
             transition={{ duration: 0.65, ease: [0.16, 1, 0.3, 1] as const }}
             className="max-w-xl mb-14"
           >
-            <p className="text-gold text-xs tracking-[0.25em] uppercase font-display mb-5">
+            <p className="text-gold text-xs tracking-widest uppercase font-display mb-5">
               The flow
             </p>
             <h2 className="font-display font-bold text-3xl lg:text-4xl text-ink leading-tight">
@@ -294,7 +294,7 @@ export default function HowItWorksPage() {
             viewport={{ once: true, margin: '-80px' }}
           >
             <motion.div variants={fadeUp} className="max-w-xl mb-14">
-              <p className="text-gold text-xs tracking-[0.25em] uppercase font-display mb-5">
+              <p className="text-gold text-xs tracking-widest uppercase font-display mb-5">
                 Integrations
               </p>
               <h2 className="font-display font-bold text-3xl lg:text-4xl text-ink leading-tight mb-4">
@@ -346,7 +346,7 @@ export default function HowItWorksPage() {
             viewport={{ once: true, margin: '-80px' }}
           >
             <motion.div variants={fadeUp} className="max-w-xl mb-14">
-              <p className="text-gold text-xs tracking-[0.25em] uppercase font-display mb-5">
+              <p className="text-gold text-xs tracking-widest uppercase font-display mb-5">
                 Implementation
               </p>
               <h2 className="font-display font-bold text-3xl lg:text-4xl text-ink leading-tight mb-4">
@@ -397,4 +397,5 @@ export default function HowItWorksPage() {
     </>
   )
 }
+
 

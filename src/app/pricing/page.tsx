@@ -1,4 +1,4 @@
-'use client'
+﻿'use client'
 
 import { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
@@ -69,6 +69,7 @@ const plans = [
       'API access',
     ],
     cta: 'Contact us',
+    note: 'Integratie met Exact, AFAS, SAP, WooCommerce, MySQL, PostgreSQL',
   },
 ]
 
@@ -184,7 +185,7 @@ export default function PricingPage() {
                   }`}
                   style={
                     plan.featured
-                      ? { boxShadow: '0 0 30px rgba(231,208,95,0.15)' }
+                      ? { boxShadow: '0 0 40px rgba(231,208,95,0.12)' }
                       : undefined
                   }
                 >
@@ -215,7 +216,7 @@ export default function PricingPage() {
                       {plan.description}
                     </p>
                   </div>
-                  <ul className="flex flex-col gap-3 mb-10 flex-1">
+                  <ul className="flex flex-col gap-3 mb-6 flex-1">
                     {plan.features.map((f) => (
                       <li key={f} className="flex items-start gap-3">
                         <Check size={14} className="text-gold mt-0.5 shrink-0" strokeWidth={2.5} />
@@ -223,6 +224,11 @@ export default function PricingPage() {
                       </li>
                     ))}
                   </ul>
+                  {'note' in plan && plan.note && (
+                    <p className="text-ink-faint text-[11px] leading-relaxed mb-6 pt-4 border-t border-edge">
+                      {plan.note as string}
+                    </p>
+                  )}
                   <Link
                     href="/contact"
                     className={`mt-auto inline-flex items-center justify-center px-6 py-3.5 font-display font-bold text-sm tracking-wide transition-colors ${
@@ -257,7 +263,7 @@ export default function PricingPage() {
               transition={{ duration: 0.65, ease: [0.16, 1, 0.3, 1] as const }}
               className="lg:col-span-4"
             >
-              <p className="text-gold text-xs tracking-[0.25em] uppercase font-display mb-5">
+              <p className="text-gold text-xs tracking-widest uppercase font-display mb-5">
                 Pricing FAQ
               </p>
               <h2 className="font-display font-bold text-3xl lg:text-4xl text-ink leading-tight mb-6">
@@ -303,4 +309,5 @@ export default function PricingPage() {
     </>
   )
 }
+
 

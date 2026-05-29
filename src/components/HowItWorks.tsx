@@ -1,4 +1,4 @@
-'use client'
+﻿'use client'
 
 import Link from 'next/link'
 import { motion } from 'framer-motion'
@@ -55,7 +55,7 @@ export default function HowItWorks() {
         >
           {/* Heading */}
           <motion.div variants={fadeUp} className="max-w-xl mb-16 lg:mb-24">
-            <p className="text-gold text-xs tracking-[0.25em] uppercase font-display mb-5">
+            <p className="text-gold text-xs tracking-widest uppercase font-display mb-5">
               How it works
             </p>
             <h2 className="font-display font-bold text-4xl lg:text-5xl xl:text-6xl text-ink leading-tight">
@@ -120,4 +120,5 @@ export default function HowItWorks() {
     </section>
   )
 }
+
 

@@ -1,4 +1,4 @@
-'use client'
+﻿'use client'
 
 import { motion } from 'framer-motion'
 import { Zap, Target, Lightbulb } from 'lucide-react'
@@ -59,7 +59,7 @@ export default function AboutPage() {
               transition={{ duration: 0.65, ease: [0.16, 1, 0.3, 1] as const }}
               className="lg:col-span-4"
             >
-              <p className="text-gold text-xs tracking-[0.25em] uppercase font-display mb-5">
+              <p className="text-gold text-xs tracking-widest uppercase font-display mb-5">
                 Our story
               </p>
               <h2 className="font-display font-bold text-3xl lg:text-4xl text-ink leading-tight">
@@ -76,7 +76,7 @@ export default function AboutPage() {
             >
               <p className="text-ink-dim text-lg leading-relaxed">
                 Duneslab was founded by Marijn van der Heijden — a mechanical engineering
-                student at the Amsterdam University of Applied Sciences (HvA) who started
+                student at the Hogeschool van Amsterdam (HvA) studying Werktuigbouwkunde who started
                 building software for real businesses while still studying.
               </p>
               <p className="text-ink-dim text-base leading-relaxed">
@@ -110,7 +110,7 @@ export default function AboutPage() {
             viewport={{ once: true }}
             transition={{ duration: 0.75, ease: [0.16, 1, 0.3, 1] as const }}
           >
-            <p className="text-gold text-xs tracking-[0.25em] uppercase font-display mb-8">
+            <p className="text-gold text-xs tracking-widest uppercase font-display mb-8">
               Our mission
             </p>
             <blockquote className="font-display font-bold text-3xl lg:text-4xl xl:text-5xl text-ink leading-tight max-w-4xl mx-auto">
@@ -134,7 +134,7 @@ export default function AboutPage() {
             viewport={{ once: true, margin: '-80px' }}
           >
             <motion.div variants={fadeUp} className="max-w-xl mb-14">
-              <p className="text-gold text-xs tracking-[0.25em] uppercase font-display mb-5">
+              <p className="text-gold text-xs tracking-widest uppercase font-display mb-5">
                 Our values
               </p>
               <h2 className="font-display font-bold text-3xl lg:text-4xl text-ink leading-tight">
@@ -177,7 +177,7 @@ export default function AboutPage() {
             viewport={{ once: true, margin: '-80px' }}
           >
             <motion.div variants={fadeUp} className="max-w-xl mb-14">
-              <p className="text-gold text-xs tracking-[0.25em] uppercase font-display mb-5">
+              <p className="text-gold text-xs tracking-widest uppercase font-display mb-5">
                 The team
               </p>
               <h2 className="font-display font-bold text-3xl lg:text-4xl text-ink leading-tight">
@@ -232,4 +232,5 @@ export default function AboutPage() {
     </>
   )
 }
+
 

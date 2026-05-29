@@ -9,14 +9,9 @@ function Logo() {
       <svg width="18" height="16" viewBox="0 0 22 20" fill="none" aria-hidden="true">
         <polygon points="11,1 21,19 1,19" fill="#E7D05F" />
       </svg>
-      <div className="flex flex-col leading-none">
-        <span className="font-display font-bold text-sm tracking-[0.22em] text-ink uppercase">
-          DUNES
-        </span>
-        <span className="font-display font-semibold text-[10px] tracking-[0.3em] text-gold uppercase">
-          LABS
-        </span>
-      </div>
+      <span className="font-display font-bold text-sm tracking-[0.22em] text-ink uppercase">
+        DUNESLAB
+      </span>
     </Link>
   )
 }
@@ -117,9 +112,15 @@ export default function Footer() {
 
         {/* Bottom bar */}
         <div className="py-6 border-t border-edge flex flex-col sm:flex-row items-center justify-between gap-4">
-          <p className="text-xs" style={{ color: '#6A6A6A' }}>
-            © 2026 Duneslab. All rights reserved.
-          </p>
+          <div className="flex flex-col sm:flex-row items-center gap-3">
+            <p className="text-xs" style={{ color: '#6A6A6A' }}>
+              © 2026 Duneslab. All rights reserved.
+            </p>
+            <span className="hidden sm:inline text-xs" style={{ color: '#3A3A3A' }}>·</span>
+            <p className="text-xs" style={{ color: '#6A6A6A' }}>
+              KvK: registratie in behandeling
+            </p>
+          </div>
           <p className="text-xs" style={{ color: '#6A6A6A' }}>
             Built by{' '}
             <a
