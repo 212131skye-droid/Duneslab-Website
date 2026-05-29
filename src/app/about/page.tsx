@@ -1,4 +1,4 @@
-'use client'
+﻿'use client'
 
 import { motion } from 'framer-motion'
 import { Zap, Target, Lightbulb } from 'lucide-react'
@@ -7,7 +7,7 @@ import CTAStrip from '@/components/CTAStrip'
 
 const fadeUp = {
   hidden: { opacity: 0, y: 32 },
-  show: { opacity: 1, y: 0, transition: { duration: 0.65, ease: [0.16, 1, 0.3, 1] } },
+  show: { opacity: 1, y: 0, transition: { duration: 0.65, ease: [0.16, 1, 0.3, 1] as const } },
 }
 
 const stagger = {
@@ -20,19 +20,19 @@ const values = [
     icon: Zap,
     title: 'Speed',
     description:
-      'Every tool we build is optimised for speed — both in how fast it runs and how fast it ships. We believe time is the most valuable thing a business can save.',
+      'Every tool we build is optimised for speed â€” both in how fast it runs and how fast it ships. We believe time is the most valuable thing a business can save.',
   },
   {
     icon: Target,
     title: 'Precision',
     description:
-      'Software that produces wrong output is worse than no software at all. We build for 100% accuracy every time — no approximations, no rounding errors, no excuses.',
+      'Software that produces wrong output is worse than no software at all. We build for 100% accuracy every time â€” no approximations, no rounding errors, no excuses.',
   },
   {
     icon: Lightbulb,
     title: 'Innovation',
     description:
-      'We constantly push the boundary of what business software can do. AI is not a buzzword here — it is the core of everything we build.',
+      'We constantly push the boundary of what business software can do. AI is not a buzzword here â€” it is the core of everything we build.',
   },
 ]
 
@@ -56,7 +56,7 @@ export default function AboutPage() {
               initial={{ opacity: 0, y: 32 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.65, ease: [0.16, 1, 0.3, 1] }}
+              transition={{ duration: 0.65, ease: [0.16, 1, 0.3, 1] as const }}
               className="lg:col-span-4"
             >
               <p className="text-gold text-xs tracking-[0.25em] uppercase font-display mb-5">
@@ -71,24 +71,24 @@ export default function AboutPage() {
               initial={{ opacity: 0, y: 32 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.65, ease: [0.16, 1, 0.3, 1], delay: 0.1 }}
+              transition={{ duration: 0.65, ease: [0.16, 1, 0.3, 1] as const, delay: 0.1 }}
               className="lg:col-span-8 space-y-6"
             >
               <p className="text-ink-dim text-lg leading-relaxed">
-                Duneslab was founded by Marijn van der Heijden — a mechanical engineering
+                Duneslab was founded by Marijn van der Heijden â€” a mechanical engineering
                 student at the Amsterdam University of Applied Sciences (HvA) who started
                 building software for real businesses while still studying.
               </p>
               <p className="text-ink-dim text-base leading-relaxed">
                 It started with web design: clean, fast sites for small businesses that
                 needed a better online presence. But after working with several B2B
-                companies, a pattern became clear — the biggest time loss wasn't in
+                companies, a pattern became clear â€” the biggest time loss wasn't in
                 marketing, it was in operations. Sales teams spending half their day
                 manually building quotations. Pricing errors costing thousands. Proposals
                 taking days that should take minutes.
               </p>
               <p className="text-ink-dim text-base leading-relaxed">
-                That insight led to the first Duneslab AI quotation tool — built for a
+                That insight led to the first Duneslab AI quotation tool â€” built for a
                 single client, then refined into a product. Today, Duneslab builds
                 intelligent software and automation systems for B2B enterprises across
                 the Netherlands and beyond.
@@ -108,7 +108,7 @@ export default function AboutPage() {
             initial={{ opacity: 0, y: 32 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.75, ease: [0.16, 1, 0.3, 1] }}
+            transition={{ duration: 0.75, ease: [0.16, 1, 0.3, 1] as const }}
           >
             <p className="text-gold text-xs tracking-[0.25em] uppercase font-display mb-8">
               Our mission
@@ -226,9 +226,10 @@ export default function AboutPage() {
       <CTAStrip
         heading="Want to work with us?"
         subtext="Book a free 30-minute call and let's talk about what we can build together."
-        buttonLabel="Get in touch →"
+        buttonLabel="Get in touch â†’"
         buttonHref="/contact"
       />
     </>
   )
 }
+

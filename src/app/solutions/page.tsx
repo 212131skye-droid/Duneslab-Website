@@ -1,4 +1,4 @@
-'use client'
+﻿'use client'
 
 import { motion } from 'framer-motion'
 import { Cpu, Lightbulb, Monitor, Check, ArrowRight } from 'lucide-react'
@@ -8,7 +8,7 @@ import CTAStrip from '@/components/CTAStrip'
 
 const fadeUp = {
   hidden: { opacity: 0, y: 32 },
-  show: { opacity: 1, y: 0, transition: { duration: 0.65, ease: [0.16, 1, 0.3, 1] } },
+  show: { opacity: 1, y: 0, transition: { duration: 0.65, ease: [0.16, 1, 0.3, 1] as const } },
 }
 
 const stagger = {
@@ -63,7 +63,7 @@ const consultancySteps = [
 ]
 
 const webDesignIncludes = [
-  'Custom design from zero — no templates, ever',
+  'Custom design from zero â€” no templates, ever',
   'Mobile-first, fully responsive layout',
   'SEO-optimised structure and metadata',
   'Core Web Vitals optimised (LCP, CLS, FID)',
@@ -108,12 +108,12 @@ export default function SolutionsPage() {
               <p className="text-ink-dim text-lg leading-relaxed mb-6">
                 Our flagship product automates the entire quotation workflow. Sales teams
                 select products from a clean interface, and our AI engine generates a
-                perfect, branded PDF quotation in under 10 seconds — pulling live prices
+                perfect, branded PDF quotation in under 10 seconds â€” pulling live prices
                 directly from your database.
               </p>
               <p className="text-ink-dim text-base leading-relaxed mb-10">
                 Built specifically for B2B enterprises that handle high volumes of custom
-                quotations. No generic SaaS tool you have to bend into shape — this is
+                quotations. No generic SaaS tool you have to bend into shape â€” this is
                 engineered around your workflow, your data, and your brand.
               </p>
               <Link
@@ -166,7 +166,7 @@ export default function SolutionsPage() {
                 </h2>
               </div>
               <p className="text-ink-dim text-lg leading-relaxed">
-                Not sure where AI fits in your business — or where to start? We map your
+                Not sure where AI fits in your business â€” or where to start? We map your
                 current workflows, identify the highest-value automation opportunities, and
                 build you a clear, actionable roadmap. No jargon, no hype. Just a plan
                 that actually makes sense for your team.
@@ -221,7 +221,7 @@ export default function SolutionsPage() {
               </div>
               <p className="text-ink-dim text-lg leading-relaxed mb-6">
                 Professional, conversion-focused websites built from the ground up.
-                Every site we design starts from a blank canvas — no templates, no
+                Every site we design starts from a blank canvas â€” no templates, no
                 page builders, no compromises on quality.
               </p>
               <p className="text-ink-dim text-base leading-relaxed mb-10">
@@ -263,7 +263,7 @@ export default function SolutionsPage() {
       <CTAStrip
         heading="Interested in working together?"
         subtext="Book a free call and we'll discuss which service fits your goals best."
-        buttonLabel="Book a call →"
+        buttonLabel="Book a call â†’"
         buttonHref="/contact"
         secondaryLabel="View pricing"
         secondaryHref="/pricing"
@@ -271,3 +271,4 @@ export default function SolutionsPage() {
     </>
   )
 }
+

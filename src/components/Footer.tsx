@@ -1,4 +1,4 @@
-'use client'
+﻿'use client'
 
 import Link from 'next/link'
 import { motion } from 'framer-motion'
@@ -62,7 +62,7 @@ export default function Footer() {
           initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.65, ease: [0.16, 1, 0.3, 1] }}
+          transition={{ duration: 0.65, ease: [0.16, 1, 0.3, 1] as const }}
           className="py-16 lg:py-20 grid grid-cols-1 lg:grid-cols-12 gap-12"
         >
           {/* Brand column */}
@@ -118,7 +118,7 @@ export default function Footer() {
         {/* Bottom bar */}
         <div className="py-6 border-t border-edge flex flex-col sm:flex-row items-center justify-between gap-4">
           <p className="text-xs" style={{ color: '#6A6A6A' }}>
-            © 2026 Duneslab. All rights reserved.
+            Â© 2026 Duneslab. All rights reserved.
           </p>
           <p className="text-xs" style={{ color: '#6A6A6A' }}>
             Built by{' '}
@@ -134,3 +134,4 @@ export default function Footer() {
     </footer>
   )
 }
+

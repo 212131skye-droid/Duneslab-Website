@@ -1,4 +1,4 @@
-'use client'
+﻿'use client'
 
 import { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
@@ -9,7 +9,7 @@ import Link from 'next/link'
 
 const fadeUp = {
   hidden: { opacity: 0, y: 32 },
-  show: { opacity: 1, y: 0, transition: { duration: 0.65, ease: [0.16, 1, 0.3, 1] } },
+  show: { opacity: 1, y: 0, transition: { duration: 0.65, ease: [0.16, 1, 0.3, 1] as const } },
 }
 
 const stagger = {
@@ -20,9 +20,9 @@ const stagger = {
 const plans = [
   {
     name: 'Starter',
-    price: '€595',
+    price: 'â‚¬595',
     period: '/mo',
-    setup: '+ €9.500 one-time setup',
+    setup: '+ â‚¬9.500 one-time setup',
     description: 'Everything you need to automate quotation generation.',
     featured: false,
     features: [
@@ -37,9 +37,9 @@ const plans = [
   },
   {
     name: 'Professional',
-    price: '€790',
+    price: 'â‚¬790',
     period: '/mo',
-    setup: '+ €9.500 one-time setup',
+    setup: '+ â‚¬9.500 one-time setup',
     description: 'Priority support and advanced analytics for growing teams.',
     featured: true,
     features: [
@@ -57,7 +57,7 @@ const plans = [
     name: 'Enterprise',
     price: 'Custom',
     period: '',
-    setup: '+ €3.500 integration fee',
+    setup: '+ â‚¬3.500 integration fee',
     description: 'Full integration, dedicated onboarding and SLA guarantees.',
     featured: false,
     features: [
@@ -76,12 +76,12 @@ const pricingFaqs = [
   {
     question: 'What is included in the one-time setup fee?',
     answer:
-      'The setup fee covers initial integration with your product database or ERP system, configuration of your PDF templates and pricing logic, team onboarding and training, and a full QA round before go-live. It is a one-time investment — no recurring charges for setup work.',
+      'The setup fee covers initial integration with your product database or ERP system, configuration of your PDF templates and pricing logic, team onboarding and training, and a full QA round before go-live. It is a one-time investment â€” no recurring charges for setup work.',
   },
   {
     question: 'Can I change plans later?',
     answer:
-      'Yes. You can upgrade from Starter to Professional at any time — the price difference is prorated from your next billing cycle. Downgrading is available at the end of your contract term.',
+      'Yes. You can upgrade from Starter to Professional at any time â€” the price difference is prorated from your next billing cycle. Downgrading is available at the end of your contract term.',
   },
   {
     question: 'What does the minimum 12-month contract include?',
@@ -136,7 +136,7 @@ function FAQItem({
             initial={{ height: 0, opacity: 0 }}
             animate={{ height: 'auto', opacity: 1 }}
             exit={{ height: 0, opacity: 0 }}
-            transition={{ duration: 0.3, ease: [0.16, 1, 0.3, 1] }}
+            transition={{ duration: 0.3, ease: [0.16, 1, 0.3, 1] as const }}
             style={{ overflow: 'hidden' }}
           >
             <p className="text-ink-dim text-sm leading-relaxed pb-6 max-w-2xl">
@@ -231,7 +231,7 @@ export default function PricingPage() {
                         : 'border border-gold-muted text-ink hover:bg-[rgba(231,208,95,0.07)]'
                     }`}
                   >
-                    {plan.cta} →
+                    {plan.cta} â†’
                   </Link>
                 </motion.div>
               ))}
@@ -254,7 +254,7 @@ export default function PricingPage() {
               initial={{ opacity: 0, y: 32 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.65, ease: [0.16, 1, 0.3, 1] }}
+              transition={{ duration: 0.65, ease: [0.16, 1, 0.3, 1] as const }}
               className="lg:col-span-4"
             >
               <p className="text-gold text-xs tracking-[0.25em] uppercase font-display mb-5">
@@ -275,7 +275,7 @@ export default function PricingPage() {
               initial={{ opacity: 0, y: 32 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: '-80px' }}
-              transition={{ duration: 0.65, ease: [0.16, 1, 0.3, 1], delay: 0.1 }}
+              transition={{ duration: 0.65, ease: [0.16, 1, 0.3, 1] as const, delay: 0.1 }}
               className="lg:col-span-8"
             >
               {pricingFaqs.map((faq, i) => (
@@ -295,7 +295,7 @@ export default function PricingPage() {
       <CTAStrip
         heading="Ready to get started?"
         subtext="Book a free 30-minute demo and see the platform live. No commitment required."
-        buttonLabel="Book a demo →"
+        buttonLabel="Book a demo â†’"
         buttonHref="/contact"
         secondaryLabel="View solutions"
         secondaryHref="/solutions"
@@ -303,3 +303,4 @@ export default function PricingPage() {
     </>
   )
 }
+

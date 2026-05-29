@@ -1,11 +1,11 @@
-'use client'
+﻿'use client'
 
 import { motion } from 'framer-motion'
 import { Check } from 'lucide-react'
 
 const fadeUp = {
   hidden: { opacity: 0, y: 32 },
-  show: { opacity: 1, y: 0, transition: { duration: 0.65, ease: [0.16, 1, 0.3, 1] } },
+  show: { opacity: 1, y: 0, transition: { duration: 0.65, ease: [0.16, 1, 0.3, 1] as const } },
 }
 
 const stagger = {
@@ -16,9 +16,9 @@ const stagger = {
 const plans = [
   {
     name: 'Starter',
-    price: '€595',
+    price: 'â‚¬595',
     period: '/mo',
-    setup: '+ €9.500 one-time setup',
+    setup: '+ â‚¬9.500 one-time setup',
     description: 'Everything you need to automate quotation generation.',
     featured: false,
     features: [
@@ -33,9 +33,9 @@ const plans = [
   },
   {
     name: 'Professional',
-    price: '€790',
+    price: 'â‚¬790',
     period: '/mo',
-    setup: '+ €9.500 one-time setup',
+    setup: '+ â‚¬9.500 one-time setup',
     description: 'Priority support and advanced analytics for growing teams.',
     featured: true,
     features: [
@@ -53,7 +53,7 @@ const plans = [
     name: 'Enterprise',
     price: 'Custom',
     period: '',
-    setup: '+ €3.500 integration fee',
+    setup: '+ â‚¬3.500 integration fee',
     description: 'Full integration, dedicated onboarding and SLA guarantees.',
     featured: false,
     features: [
@@ -166,7 +166,7 @@ export default function Pricing() {
                       : 'border border-gold-muted text-ink hover:bg-[rgba(231,208,95,0.07)]'
                   }`}
                 >
-                  {plan.cta} →
+                  {plan.cta} â†’
                 </a>
               </motion.div>
             ))}
@@ -185,3 +185,4 @@ export default function Pricing() {
     </section>
   )
 }
+

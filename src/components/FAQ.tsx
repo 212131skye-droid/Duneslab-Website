@@ -1,4 +1,4 @@
-'use client'
+﻿'use client'
 
 import { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
@@ -6,7 +6,7 @@ import { Plus } from 'lucide-react'
 
 const fadeUp = {
   hidden: { opacity: 0, y: 32 },
-  show: { opacity: 1, y: 0, transition: { duration: 0.65, ease: [0.16, 1, 0.3, 1] } },
+  show: { opacity: 1, y: 0, transition: { duration: 0.65, ease: [0.16, 1, 0.3, 1] as const } },
 }
 
 const stagger = {
@@ -18,7 +18,7 @@ const faqs = [
   {
     question: 'What systems can you integrate with?',
     answer:
-      'Duneslab integrates with most common ERP and database systems including SAP, Microsoft Dynamics, Exact, Salesforce and custom SQL databases. If you use a different system, reach out — we handle custom integrations on a case-by-case basis.',
+      'Duneslab integrates with most common ERP and database systems including SAP, Microsoft Dynamics, Exact, Salesforce and custom SQL databases. If you use a different system, reach out â€” we handle custom integrations on a case-by-case basis.',
   },
   {
     question: 'How long does implementation take?',
@@ -33,7 +33,7 @@ const faqs = [
   {
     question: 'Can I cancel anytime?',
     answer:
-      'Our standard contracts have a minimum term of 12 months. After that, you can cancel with 30 days notice. We are transparent about this upfront — no lock-ins beyond the initial term.',
+      'Our standard contracts have a minimum term of 12 months. After that, you can cancel with 30 days notice. We are transparent about this upfront â€” no lock-ins beyond the initial term.',
   },
   {
     question: 'Do you offer a demo?',
@@ -84,7 +84,7 @@ function FAQItem({
             initial={{ height: 0, opacity: 0 }}
             animate={{ height: 'auto', opacity: 1 }}
             exit={{ height: 0, opacity: 0 }}
-            transition={{ duration: 0.3, ease: [0.16, 1, 0.3, 1] }}
+            transition={{ duration: 0.3, ease: [0.16, 1, 0.3, 1] as const }}
             style={{ overflow: 'hidden' }}
           >
             <p className="text-ink-dim text-sm leading-relaxed pb-6 max-w-2xl">
@@ -112,7 +112,7 @@ export default function FAQ() {
             initial={{ opacity: 0, y: 32 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.65, ease: [0.16, 1, 0.3, 1] }}
+            transition={{ duration: 0.65, ease: [0.16, 1, 0.3, 1] as const }}
             className="lg:col-span-4"
           >
             <p className="text-gold text-xs tracking-[0.25em] uppercase font-display mb-5">
@@ -155,3 +155,4 @@ export default function FAQ() {
     </section>
   )
 }
+

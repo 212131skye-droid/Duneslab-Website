@@ -1,4 +1,4 @@
-'use client'
+﻿'use client'
 
 import Link from 'next/link'
 import { motion } from 'framer-motion'
@@ -15,7 +15,7 @@ interface CTAStripProps {
 export default function CTAStrip({
   heading = 'Ready to get started?',
   subtext = 'Book a free 30-minute demo and see the tool in action. No commitment, no sales pressure.',
-  buttonLabel = 'Book a demo →',
+  buttonLabel = 'Book a demo â†’',
   buttonHref = '/contact',
   secondaryLabel,
   secondaryHref,
@@ -37,7 +37,7 @@ export default function CTAStrip({
           initial={{ opacity: 0, y: 32 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.65, ease: [0.16, 1, 0.3, 1] }}
+          transition={{ duration: 0.65, ease: [0.16, 1, 0.3, 1] as const }}
         >
           <h2 className="font-display font-bold text-4xl lg:text-5xl xl:text-6xl text-ink leading-tight mb-5">
             {heading}
@@ -64,3 +64,4 @@ export default function CTAStrip({
     </section>
   )
 }
+

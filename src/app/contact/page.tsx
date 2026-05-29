@@ -1,4 +1,4 @@
-'use client'
+﻿'use client'
 
 import { useState } from 'react'
 import { motion } from 'framer-motion'
@@ -7,7 +7,7 @@ import PageHero from '@/components/PageHero'
 
 const fadeUp = {
   hidden: { opacity: 0, y: 32 },
-  show: { opacity: 1, y: 0, transition: { duration: 0.65, ease: [0.16, 1, 0.3, 1] } },
+  show: { opacity: 1, y: 0, transition: { duration: 0.65, ease: [0.16, 1, 0.3, 1] as const } },
 }
 
 const stagger = {
@@ -20,13 +20,13 @@ const nextSteps = [
     step: '01',
     title: 'We contact you within 24h',
     description:
-      'After you submit, Marijn will personally respond within 24 hours — usually much faster. No automated sequences, no sales team.',
+      'After you submit, Marijn will personally respond within 24 hours â€” usually much faster. No automated sequences, no sales team.',
   },
   {
     step: '02',
     title: 'Free 30-minute demo call',
     description:
-      'We schedule a screen-share call where you can see the tool in action with your type of product data. No slides, no pitch decks — just the real thing.',
+      'We schedule a screen-share call where you can see the tool in action with your type of product data. No slides, no pitch decks â€” just the real thing.',
   },
   {
     step: '03',
@@ -53,7 +53,7 @@ export default function ContactPage() {
       fd.get('message') as string,
     ]
     const body = lines.join('\n')
-    const subject = `Demo request — ${fd.get('company') || fd.get('name')}`
+    const subject = `Demo request â€” ${fd.get('company') || fd.get('name')}`
     window.location.href = `mailto:marijn@duneslab.nl?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`
     setSubmitted(true)
   }
@@ -95,7 +95,7 @@ export default function ContactPage() {
                     onClick={() => setSubmitted(false)}
                     className="text-gold text-sm font-display hover:text-gold-bright transition-colors"
                   >
-                    ← Send another message
+                    â† Send another message
                   </button>
                 </div>
               ) : (
@@ -185,7 +185,7 @@ export default function ContactPage() {
                     type="submit"
                     className="inline-flex items-center justify-center px-8 py-4 bg-gold text-void font-display font-bold text-sm tracking-[0.12em] uppercase transition-colors hover:bg-gold-bright"
                   >
-                    Send message →
+                    Send message â†’
                   </button>
 
                   <p className="text-ink-faint text-xs pt-2">
@@ -275,3 +275,4 @@ export default function ContactPage() {
     </>
   )
 }
+

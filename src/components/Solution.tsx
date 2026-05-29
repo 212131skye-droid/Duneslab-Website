@@ -1,4 +1,4 @@
-'use client'
+﻿'use client'
 
 import { useState, useEffect, useRef } from 'react'
 import { motion, useInView } from 'framer-motion'
@@ -6,7 +6,7 @@ import { Database, Zap, FileText } from 'lucide-react'
 
 const fadeUp = {
   hidden: { opacity: 0, y: 32 },
-  show: { opacity: 1, y: 0, transition: { duration: 0.65, ease: [0.16, 1, 0.3, 1] } },
+  show: { opacity: 1, y: 0, transition: { duration: 0.65, ease: [0.16, 1, 0.3, 1] as const } },
 }
 
 const stagger = {
@@ -39,7 +39,7 @@ const flowSteps = [
 const stats = [
   { value: '8', suffix: 's', label: 'Generation time' },
   { value: '100', suffix: '%', label: 'Accurate every time' },
-  { value: '∞', suffix: '', label: 'Always up to date' },
+  { value: 'âˆž', suffix: '', label: 'Always up to date' },
 ]
 
 function StatCounter({ value, suffix, label }: { value: string; suffix: string; label: string }) {
@@ -123,7 +123,7 @@ export default function Solution() {
             </h2>
             <p className="text-ink-dim text-lg leading-relaxed">
               Our AI software connects to your database and generates perfect
-              quotations in seconds — accurate, branded, and client-ready.
+              quotations in seconds â€” accurate, branded, and client-ready.
             </p>
           </motion.div>
 
@@ -196,3 +196,4 @@ export default function Solution() {
     </section>
   )
 }
+

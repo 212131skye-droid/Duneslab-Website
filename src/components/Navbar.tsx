@@ -1,4 +1,4 @@
-'use client'
+﻿'use client'
 
 import { useState, useEffect } from 'react'
 import Link from 'next/link'
@@ -52,7 +52,7 @@ export default function Navbar() {
     <motion.header
       initial={{ opacity: 0, y: -20 }}
       animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
+      transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] as const }}
       className="fixed top-0 left-0 right-0 z-50"
     >
       <div
@@ -143,3 +143,4 @@ export default function Navbar() {
     </motion.header>
   )
 }
+

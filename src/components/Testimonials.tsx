@@ -1,10 +1,10 @@
-'use client'
+﻿'use client'
 
 import { motion } from 'framer-motion'
 
 const fadeUp = {
   hidden: { opacity: 0, y: 32 },
-  show: { opacity: 1, y: 0, transition: { duration: 0.65, ease: [0.16, 1, 0.3, 1] } },
+  show: { opacity: 1, y: 0, transition: { duration: 0.65, ease: [0.16, 1, 0.3, 1] as const } },
 }
 
 const stagger = {
@@ -22,7 +22,7 @@ const testimonials = [
   },
   {
     quote:
-      "Duneslab didn't just automate our quotes — they made us look more professional than competitors twice our size. Clients comment on the quality of our proposals every week. The ROI was visible within the first month.",
+      "Duneslab didn't just automate our quotes â€” they made us look more professional than competitors twice our size. Clients comment on the quality of our proposals every week. The ROI was visible within the first month.",
     name: 'Sophie Vermeer',
     title: 'Head of Operations',
     company: 'INFRACORE',
@@ -88,7 +88,7 @@ export default function Testimonials() {
                     {name}
                   </p>
                   <p className="text-ink-faint text-xs mt-0.5">
-                    {title} ·{' '}
+                    {title} Â·{' '}
                     <span className="text-gold">{company}</span>
                   </p>
                 </div>
@@ -100,3 +100,4 @@ export default function Testimonials() {
     </section>
   )
 }
+

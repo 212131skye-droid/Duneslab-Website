@@ -1,11 +1,11 @@
-'use client'
+﻿'use client'
 
 import { motion } from 'framer-motion'
 import { Clock, AlertTriangle, TrendingDown } from 'lucide-react'
 
 const fadeUp = {
   hidden: { opacity: 0, y: 32 },
-  show: { opacity: 1, y: 0, transition: { duration: 0.65, ease: [0.16, 1, 0.3, 1] } },
+  show: { opacity: 1, y: 0, transition: { duration: 0.65, ease: [0.16, 1, 0.3, 1] as const } },
 }
 
 const stagger = {
@@ -18,7 +18,7 @@ const painPoints = [
     icon: Clock,
     title: 'Hours wasted',
     description:
-      'Manual quotation creation takes 2–4 hours per client. Your sales team spends more time formatting than closing.',
+      'Manual quotation creation takes 2â€“4 hours per client. Your sales team spends more time formatting than closing.',
   },
   {
     icon: AlertTriangle,
@@ -92,3 +92,4 @@ export default function Problem() {
     </section>
   )
 }
+

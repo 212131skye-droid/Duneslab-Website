@@ -1,4 +1,4 @@
-'use client'
+﻿'use client'
 
 import { motion } from 'framer-motion'
 import { Database, Zap, FileText, Send, Server, Code, Globe, Check } from 'lucide-react'
@@ -7,7 +7,7 @@ import CTAStrip from '@/components/CTAStrip'
 
 const fadeUp = {
   hidden: { opacity: 0, y: 32 },
-  show: { opacity: 1, y: 0, transition: { duration: 0.65, ease: [0.16, 1, 0.3, 1] } },
+  show: { opacity: 1, y: 0, transition: { duration: 0.65, ease: [0.16, 1, 0.3, 1] as const } },
 }
 
 const stagger = {
@@ -22,10 +22,10 @@ const steps = [
     title: 'Connect',
     subtitle: 'We integrate with your data',
     description:
-      'Duneslab connects directly to your product database, ERP system, or price list. No restructuring required — we work with your existing data structure, whether that is a cloud ERP, a local SQL server, or a shared spreadsheet.',
+      'Duneslab connects directly to your product database, ERP system, or price list. No restructuring required â€” we work with your existing data structure, whether that is a cloud ERP, a local SQL server, or a shared spreadsheet.',
     details: [
       'Compatible with all major ERP and database systems',
-      'Secure read-only connection — we never modify your data',
+      'Secure read-only connection â€” we never modify your data',
       'Live sync: price and stock changes reflect instantly in quotes',
       'Typically completed in the first week of implementation',
     ],
@@ -50,7 +50,7 @@ const steps = [
     title: 'Generate',
     subtitle: 'Quotes in under 10 seconds',
     description:
-      'Your sales team opens the Duneslab interface, selects products and quantities, and clicks generate. The AI engine applies all configured rules and produces a complete, accurate, client-ready quotation — in under 10 seconds.',
+      'Your sales team opens the Duneslab interface, selects products and quantities, and clicks generate. The AI engine applies all configured rules and produces a complete, accurate, client-ready quotation â€” in under 10 seconds.',
     details: [
       'Clean, intuitive product selection interface',
       'Live price validation as products are selected',
@@ -217,7 +217,7 @@ export default function HowItWorksPage() {
             initial={{ opacity: 0, y: 32 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.65, ease: [0.16, 1, 0.3, 1] }}
+            transition={{ duration: 0.65, ease: [0.16, 1, 0.3, 1] as const }}
             className="max-w-xl mb-14"
           >
             <p className="text-gold text-xs tracking-[0.25em] uppercase font-display mb-5">
@@ -232,7 +232,7 @@ export default function HowItWorksPage() {
             initial={{ opacity: 0, y: 32 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.65, ease: [0.16, 1, 0.3, 1], delay: 0.15 }}
+            transition={{ duration: 0.65, ease: [0.16, 1, 0.3, 1] as const, delay: 0.15 }}
             className="flex flex-col lg:flex-row items-stretch lg:items-center justify-center gap-0"
           >
             {[
@@ -389,7 +389,7 @@ export default function HowItWorksPage() {
       <CTAStrip
         heading="Ready to see it in action?"
         subtext="Book a free 30-minute demo. We'll show you the full flow live, with your type of products."
-        buttonLabel="Book a demo →"
+        buttonLabel="Book a demo â†’"
         buttonHref="/contact"
         secondaryLabel="View pricing"
         secondaryHref="/pricing"
@@ -397,3 +397,4 @@ export default function HowItWorksPage() {
     </>
   )
 }
+

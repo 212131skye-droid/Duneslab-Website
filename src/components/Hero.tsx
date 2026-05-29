@@ -1,4 +1,4 @@
-'use client'
+﻿'use client'
 
 import Link from 'next/link'
 import { motion } from 'framer-motion'
@@ -12,7 +12,7 @@ const container = {
 
 const item = {
   hidden: { opacity: 0, y: 40 },
-  show: { opacity: 1, y: 0, transition: { duration: 0.75, ease: [0.16, 1, 0.3, 1] } },
+  show: { opacity: 1, y: 0, transition: { duration: 0.75, ease: [0.16, 1, 0.3, 1] as const } },
 }
 
 const partners = ['CELDEX', 'TECHNOBUILD', 'INFRACORE', 'NORTHWIND']
@@ -62,7 +62,7 @@ export default function Hero() {
               variants={item}
               className="text-ink-faint text-xs tracking-[0.25em] uppercase font-display mb-8"
             >
-              Premium AI Software · Netherlands
+              Premium AI Software Â· Netherlands
             </motion.p>
 
             {/* Headline */}
@@ -85,7 +85,7 @@ export default function Hero() {
               workflows and drives results.
             </motion.p>
 
-            {/* CTAs — side by side */}
+            {/* CTAs â€” side by side */}
             <motion.div
               variants={item}
               className="flex flex-row gap-4 mb-14 flex-wrap"
@@ -94,7 +94,7 @@ export default function Hero() {
                 href="/contact"
                 className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-gold text-void font-display font-bold text-sm tracking-[0.12em] uppercase transition-colors hover:bg-gold-bright"
               >
-                Book a demo →
+                Book a demo â†’
               </Link>
               <Link
                 href="/how-it-works"
@@ -126,3 +126,4 @@ export default function Hero() {
     </section>
   )
 }
+

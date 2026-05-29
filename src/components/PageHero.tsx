@@ -1,4 +1,4 @@
-'use client'
+﻿'use client'
 
 import { motion } from 'framer-motion'
 
@@ -18,7 +18,7 @@ export default function PageHero({ label, heading, subtext }: PageHeroProps) {
         <motion.div
           initial={{ opacity: 0, y: 32 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.75, ease: [0.16, 1, 0.3, 1] }}
+          transition={{ duration: 0.75, ease: [0.16, 1, 0.3, 1] as const }}
         >
           <p className="text-gold text-xs tracking-[0.25em] uppercase font-display mb-5">
             {label}
@@ -36,3 +36,4 @@ export default function PageHero({ label, heading, subtext }: PageHeroProps) {
     </section>
   )
 }
+
