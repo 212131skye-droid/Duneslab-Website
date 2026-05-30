@@ -75,23 +75,13 @@ export default function AboutPage() {
               className="lg:col-span-8 space-y-6"
             >
               <p className="text-ink-dim text-lg leading-relaxed">
-                Duneslab was founded by Marijn van der Heijden — a mechanical engineering
-                student at the Hogeschool van Amsterdam (HvA) studying Werktuigbouwkunde who started
-                building software for real businesses while still studying.
+                Marijn van der Heijden is de oprichter van Duneslab. Met een achtergrond
+                in techniek en een sterke focus op bedrijfsprocessen bouwt hij software
+                die complexe workflows automatiseert voor Nederlandse B2B bedrijven.
               </p>
               <p className="text-ink-dim text-base leading-relaxed">
-                It started with web design: clean, fast sites for small businesses that
-                needed a better online presence. But after working with several B2B
-                companies, a pattern became clear — the biggest time loss wasn't in
-                marketing, it was in operations. Sales teams spending half their day
-                manually building quotations. Pricing errors costing thousands. Proposals
-                taking days that should take minutes.
-              </p>
-              <p className="text-ink-dim text-base leading-relaxed">
-                That insight led to the first Duneslab AI quotation tool — built for a
-                single client, then refined into a product. Today, Duneslab builds
-                intelligent software and automation systems for B2B enterprises across
-                the Netherlands and beyond.
+                Duneslab is opgericht vanuit een simpele overtuiging: zakelijke software
+                moet snel, intelligent en betrouwbaar zijn — zonder compromissen.
               </p>
             </motion.div>
           </div>
@@ -207,9 +197,8 @@ export default function AboutPage() {
                   Founder & Developer
                 </p>
                 <p className="text-ink-dim text-sm leading-relaxed">
-                  Mechanical engineering student at HvA Amsterdam. Builds AI software
-                  and automation tools for B2B enterprises. Started with web design,
-                  evolved into full AI software products. Based in the Netherlands.
+                  Oprichter van Duneslab. Bouwt AI software en automatiseringstools
+                  voor Nederlandse B2B bedrijven. Gevestigd in Nederland.
                 </p>
                 <a
                   href="mailto:marijn@duneslab.nl"

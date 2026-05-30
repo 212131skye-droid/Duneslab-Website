@@ -15,7 +15,7 @@ const item = {
   show: { opacity: 1, y: 0, transition: { duration: 0.75, ease: [0.16, 1, 0.3, 1] as const } },
 }
 
-const partners = ['CELDEX', 'TECHNOBUILD', 'INFRACORE', 'NORTHWIND']
+const partners = ['CELDEX']
 
 export default function Hero() {
   return (
@@ -81,13 +81,13 @@ export default function Hero() {
               variants={item}
               className="text-ink-dim text-lg lg:text-xl max-w-[480px] mb-10 leading-relaxed"
             >
-              We build AI software that saves your team hours every single day.
+              Uw offerte in 8 seconden. Uw concurrent doet er nog 3 uur over.
             </motion.p>
 
             {/* CTAs — side by side */}
             <motion.div
               variants={item}
-              className="flex flex-col sm:flex-row gap-4 mb-14"
+              className="flex flex-col sm:flex-row gap-4 mb-4"
             >
               <Link
                 href="/contact"
@@ -103,10 +103,19 @@ export default function Hero() {
               </Link>
             </motion.div>
 
+            {/* Scarcity */}
+            <motion.p
+              variants={item}
+              className="text-sm italic mb-10 max-w-[420px]"
+              style={{ color: '#9A9A9A' }}
+            >
+              Wij begeleiden maximaal 5 nieuwe klanten per kwartaal om kwaliteit te garanderen. Momenteel zijn er 2 plekken beschikbaar.
+            </motion.p>
+
             {/* Social proof */}
             <motion.div variants={item}>
               <p className="text-ink-faint text-[10px] tracking-widest uppercase mb-4">
-                Trusted by industry leaders
+                Huidige pilot partners
               </p>
               <div className="flex flex-wrap gap-6 sm:gap-10">
                 {partners.map((p) => (

@@ -33,9 +33,9 @@ const plans = [
   },
   {
     name: 'Professional',
-    price: '€790',
+    price: '€595',
     period: '/mo',
-    setup: '+ €9.500 one-time setup',
+    setup: '+ €195/mo SLA · €9.500 one-time setup',
     description: 'Priority support and advanced analytics for growing teams.',
     featured: true,
     features: [

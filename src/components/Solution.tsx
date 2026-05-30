@@ -1,7 +1,7 @@
 ﻿'use client'
 
 import { useState, useEffect, useRef } from 'react'
-import { motion, useInView } from 'framer-motion'
+import { motion } from 'framer-motion'
 import { Database, Zap, FileText } from 'lucide-react'
 
 const fadeUp = {
@@ -39,17 +39,33 @@ const flowSteps = [
 const stats = [
   { value: '8', suffix: 's', label: 'Generation time' },
   { value: '100', suffix: '%', label: 'Accurate every time' },
-  { value: '∞', suffix: '', label: 'Always up to date' },
+  { value: 'Live', suffix: '', label: 'Always up to date' },
 ]
 
 function StatCounter({ value, suffix, label }: { value: string; suffix: string; label: string }) {
   const ref = useRef<HTMLDivElement>(null)
-  const isInView = useInView(ref, { once: true })
+  const [inView, setInView] = useState(false)
   const isNumeric = !isNaN(Number(value))
   const [display, setDisplay] = useState(isNumeric ? '0' : value)
 
   useEffect(() => {
-    if (!isInView || !isNumeric) {
+    const el = ref.current
+    if (!el) return
+    const obs = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setInView(true)
+          obs.disconnect()
+        }
+      },
+      { rootMargin: '-80px' }
+    )
+    obs.observe(el)
+    return () => obs.disconnect()
+  }, [])
+
+  useEffect(() => {
+    if (!inView || !isNumeric) {
       if (!isNumeric) setDisplay(value)
       return
     }
@@ -65,7 +81,7 @@ function StatCounter({ value, suffix, label }: { value: string; suffix: string; 
       else setDisplay(String(target))
     }
     requestAnimationFrame(tick)
-  }, [isInView, value, isNumeric])
+  }, [inView, value, isNumeric])
 
   return (
     <div ref={ref} className="text-center">

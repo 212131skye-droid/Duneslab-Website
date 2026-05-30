@@ -80,6 +80,14 @@ export default function ContactPage() {
           >
             {/* Left: form */}
             <motion.div variants={fadeUp} className="lg:col-span-7">
+              <div className="flex items-start gap-3 px-5 py-4 border border-gold-muted bg-surface mb-8">
+                <div className="w-1 shrink-0 self-stretch bg-gold" />
+                <p className="text-ink-dim text-sm leading-relaxed">
+                  Wij nemen momenteel maximaal{' '}
+                  <span className="text-ink font-semibold">5 klanten per kwartaal</span>{' '}
+                  aan. Vul het formulier in om uw plek te reserveren.
+                </p>
+              </div>
               {submitted ? (
                 <div className="flex flex-col items-start gap-4 p-8 border border-gold bg-surface">
                   <div className="absolute top-0 left-0 right-0 h-px bg-gold" />

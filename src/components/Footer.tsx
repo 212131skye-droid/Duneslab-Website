@@ -116,10 +116,6 @@ export default function Footer() {
             <p className="text-xs" style={{ color: '#6A6A6A' }}>
               © 2026 Duneslab. All rights reserved.
             </p>
-            <span className="hidden sm:inline text-xs" style={{ color: '#3A3A3A' }}>·</span>
-            <p className="text-xs" style={{ color: '#6A6A6A' }}>
-              KvK: registratie in behandeling
-            </p>
           </div>
           <p className="text-xs" style={{ color: '#6A6A6A' }}>
             Built by{' '}

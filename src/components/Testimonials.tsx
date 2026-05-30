@@ -14,25 +14,19 @@ const stagger = {
 
 const testimonials = [
   {
-    quote:
-      "We went from spending half a day on each quotation to under a minute. Our sales team now closes two to three times as many deals in the same timeframe. The accuracy alone has saved us from several costly pricing mistakes.",
-    name: 'Lars Hendriksen',
-    title: 'Sales Director',
-    company: 'TECHNOBUILD',
+    quote: 'Eerste referentie volgt na lopende pilot.',
+    name: 'Pilot klant A',
+    company: 'Nederlandse groothandel',
   },
   {
-    quote:
-      "Duneslab didn't just automate our quotes — they made us look more professional than competitors twice our size. Clients comment on the quality of our proposals every week. The ROI was visible within the first month.",
-    name: 'Sophie Vermeer',
-    title: 'Head of Operations',
-    company: 'INFRACORE',
+    quote: 'Eerste referentie volgt na lopende pilot.',
+    name: 'Pilot klant B',
+    company: 'Nederlandse bouwonderneming',
   },
   {
-    quote:
-      "The implementation was faster than I expected and the team was genuinely hands-on throughout. We had it connected to our ERP within a week. It has fundamentally changed how we operate.",
-    name: 'Rens van Dijk',
-    title: 'Managing Director',
-    company: 'CELDEX',
+    quote: 'Eerste referentie volgt na lopende pilot.',
+    name: 'Pilot klant C',
+    company: 'Logistiek bedrijf Nederland',
   },
 ]
 
@@ -62,7 +56,7 @@ export default function Testimonials() {
 
           {/* Testimonial cards */}
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-5">
-            {testimonials.map(({ quote, name, title, company }) => (
+            {testimonials.map(({ quote, name, company }) => (
               <motion.div
                 key={name}
                 variants={fadeUp}
@@ -79,7 +73,7 @@ export default function Testimonials() {
                   "
                 </div>
 
-                <blockquote className="text-ink text-base leading-relaxed flex-1 mb-8">
+                <blockquote className="text-ink-dim text-base leading-relaxed flex-1 mb-8 italic">
                   {quote}
                 </blockquote>
 
@@ -88,7 +82,6 @@ export default function Testimonials() {
                     {name}
                   </p>
                   <p className="text-ink-faint text-xs mt-0.5">
-                    {title} ·{' '}
                     <span className="text-gold">{company}</span>
                   </p>
                 </div>
