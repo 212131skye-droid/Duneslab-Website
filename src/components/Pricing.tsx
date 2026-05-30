@@ -18,7 +18,10 @@ const plans = [
     name: 'Starter',
     price: '€595',
     period: '/mo',
-    setup: '+ €9.500 eenmalige setup',
+    sla: null as string | null,
+    setupFee: '+ €9.500 eenmalige opstartkosten',
+    setupNote: 'eenmalig, inclusief implementatie en configuratie',
+    yearTotal: 'Jaar 1 totaal: ~€16.640 (setup + 12x abonnement)',
     description: 'Alles wat u nodig heeft om offertegeneratie te automatiseren.',
     featured: false,
     features: [
@@ -35,7 +38,10 @@ const plans = [
     name: 'Professional',
     price: '€595',
     period: '/mo',
-    setup: '+ €195/mo SLA · €9.500 eenmalige setup',
+    sla: '+ €195/mo SLA' as string | null,
+    setupFee: '+ €9.500 eenmalige opstartkosten',
+    setupNote: 'eenmalig, inclusief implementatie en configuratie',
+    yearTotal: 'Jaar 1 totaal: ~€19.280 (setup + 12x abonnement + SLA)',
     description: 'Prioriteitsondersteuning en uitgebreide analyses voor groeiende teams.',
     featured: true,
     features: [
@@ -53,7 +59,10 @@ const plans = [
     name: 'Enterprise',
     price: 'Maatwerk',
     period: '',
-    setup: '+ €3.500 integratievergoeding',
+    sla: null as string | null,
+    setupFee: '+ €3.500 integratievergoeding',
+    setupNote: 'eenmalig',
+    yearTotal: 'Jaar 1 totaal: op aanvraag',
     description: 'Volledige integratie, toegewijde onboarding en SLA-garanties.',
     featured: false,
     features: [
@@ -124,7 +133,9 @@ export default function Pricing() {
                   <h3 className="font-display font-bold text-lg text-ink-dim mb-4">
                     {plan.name}
                   </h3>
-                  <div className="flex items-end gap-1 mb-1">
+
+                  {/* Monthly price */}
+                  <div className="flex items-end gap-1 mb-3">
                     <span className="font-display font-bold text-4xl lg:text-5xl text-ink">
                       {plan.price}
                     </span>
@@ -132,13 +143,22 @@ export default function Pricing() {
                       <span className="text-ink-dim text-base mb-1.5">{plan.period}</span>
                     )}
                   </div>
-                  <p className="text-ink-faint text-xs mb-4">{plan.setup}</p>
+
+                  {/* SLA line (Professional only) */}
+                  {plan.sla && (
+                    <p className="text-ink-dim text-sm font-semibold mb-1">{plan.sla}</p>
+                  )}
+
+                  {/* Setup fee — prominent */}
+                  <p className="text-ink text-sm font-semibold mb-1">{plan.setupFee}</p>
+                  <p className="text-ink-faint text-xs italic mb-5">({plan.setupNote})</p>
+
                   <p className="text-ink-dim text-sm leading-relaxed mb-8 pb-8 border-b border-edge">
                     {plan.description}
                   </p>
                 </div>
 
-                <ul className="flex flex-col gap-3 mb-10 flex-1">
+                <ul className="flex flex-col gap-3 mb-6 flex-1">
                   {plan.features.map((f) => (
                     <li key={f} className="flex items-start gap-3">
                       <Check
@@ -150,6 +170,13 @@ export default function Pricing() {
                     </li>
                   ))}
                 </ul>
+
+                {/* Year 1 total */}
+                <div className="pt-4 border-t border-edge mb-6">
+                  <p className="text-xs italic" style={{ color: '#9A9A9A' }}>
+                    {plan.yearTotal}
+                  </p>
+                </div>
 
                 <a
                   href="#contact"
@@ -169,7 +196,7 @@ export default function Pricing() {
             variants={fadeUp}
             className="text-ink-faint text-xs text-center"
           >
-            Alle prijzen zijn exclusief BTW. Minimale contractduur: 12 maanden. Maatwerktarieven beschikbaar voor hoge volumes.
+            Alle genoemde prijzen zijn exclusief BTW. De eenmalige opstartkosten omvatten implementatie, configuratie en training.
           </motion.p>
         </motion.div>
       </div>
