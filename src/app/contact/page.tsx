@@ -1,4 +1,4 @@
-﻿'use client'
+'use client'
 
 import { useState } from 'react'
 import { motion } from 'framer-motion'
@@ -18,21 +18,21 @@ const stagger = {
 const nextSteps = [
   {
     step: '01',
-    title: 'We contact you within 24h',
+    title: 'Wij nemen binnen 24 uur contact met u op',
     description:
-      'After you submit, Marijn will personally respond within 24 hours — usually much faster. No automated sequences, no sales team.',
+      'Na uw inzending reageert Marijn persoonlijk binnen 24 uur — vaak veel sneller. Geen geautomatiseerde reeksen, geen salesteam.',
   },
   {
     step: '02',
-    title: 'Free 30-minute demo call',
+    title: 'Gratis demo van 30 minuten',
     description:
-      'We schedule a screen-share call where you can see the tool in action with your type of product data. No slides, no pitch decks — just the real thing.',
+      'Wij plannen een screen-share waarbij u de tool live in actie ziet met uw type productdata. Geen slides, geen pitchdeck — gewoon de echte tool.',
   },
   {
     step: '03',
-    title: 'Custom proposal',
+    title: 'Persoonlijk voorstel',
     description:
-      'If it looks like a fit, we send a tailored proposal within 48 hours: scope, timeline, and a fixed price. No vague estimates.',
+      'Als het een goede match lijkt, sturen wij binnen 48 uur een op maat gemaakt voorstel: scope, planning en een vaste prijs. Geen vage schattingen.',
   },
 ]
 
@@ -43,17 +43,17 @@ export default function ContactPage() {
     e.preventDefault()
     const fd = new FormData(e.currentTarget)
     const lines = [
-      `Name: ${fd.get('name')}`,
-      `Company: ${fd.get('company')}`,
-      `Email: ${fd.get('email')}`,
-      `Phone: ${fd.get('phone')}`,
-      `Service of interest: ${fd.get('service')}`,
+      `Naam: ${fd.get('name')}`,
+      `Bedrijf: ${fd.get('company')}`,
+      `E-mail: ${fd.get('email')}`,
+      `Telefoon: ${fd.get('phone')}`,
+      `Dienst van interesse: ${fd.get('service')}`,
       '',
-      'Message:',
+      'Bericht:',
       fd.get('message') as string,
     ]
     const body = lines.join('\n')
-    const subject = `Demo request — ${fd.get('company') || fd.get('name')}`
+    const subject = `Demoverzoek — ${fd.get('company') || fd.get('name')}`
     window.location.href = `mailto:marijn@duneslab.nl?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`
     setSubmitted(true)
   }
@@ -62,8 +62,8 @@ export default function ContactPage() {
     <>
       <PageHero
         label="Contact"
-        heading="Let's Talk."
-        subtext="Tell us what you're working on. We'll get back to you within 24 hours."
+        heading="Laten We Praten."
+        subtext="Vertel ons waar u mee bezig bent. Wij reageren binnen 24 uur."
       />
 
       <section
@@ -93,17 +93,17 @@ export default function ContactPage() {
                   <div className="absolute top-0 left-0 right-0 h-px bg-gold" />
                   <CheckCircle size={28} className="text-gold" strokeWidth={1.5} />
                   <h3 className="font-display font-bold text-xl text-ink">
-                    Your email client should be open.
+                    Uw e-mailclient zou nu open moeten zijn.
                   </h3>
                   <p className="text-ink-dim text-base leading-relaxed">
-                    Your message has been prepared in your email client. Hit send and
-                    we will get back to you within 24 hours.
+                    Uw bericht is klaargezet in uw e-mailclient. Klik op verzenden
+                    en wij reageren binnen 24 uur.
                   </p>
                   <button
                     onClick={() => setSubmitted(false)}
                     className="text-gold text-sm font-display hover:text-gold-bright transition-colors"
                   >
-                    ← Send another message
+                    ← Stuur nog een bericht
                   </button>
                 </div>
               ) : (
@@ -111,7 +111,7 @@ export default function ContactPage() {
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
                     <div>
                       <label className="block font-display text-xs tracking-[0.18em] uppercase text-ink-dim mb-2">
-                        Name *
+                        Naam *
                       </label>
                       <input
                         name="name"
@@ -123,7 +123,7 @@ export default function ContactPage() {
                     </div>
                     <div>
                       <label className="block font-display text-xs tracking-[0.18em] uppercase text-ink-dim mb-2">
-                        Company *
+                        Bedrijf *
                       </label>
                       <input
                         name="company"
@@ -138,7 +138,7 @@ export default function ContactPage() {
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
                     <div>
                       <label className="block font-display text-xs tracking-[0.18em] uppercase text-ink-dim mb-2">
-                        Email *
+                        E-mail *
                       </label>
                       <input
                         name="email"
@@ -150,7 +150,7 @@ export default function ContactPage() {
                     </div>
                     <div>
                       <label className="block font-display text-xs tracking-[0.18em] uppercase text-ink-dim mb-2">
-                        Phone
+                        Telefoon
                       </label>
                       <input
                         name="phone"
@@ -163,28 +163,28 @@ export default function ContactPage() {
 
                   <div>
                     <label className="block font-display text-xs tracking-[0.18em] uppercase text-ink-dim mb-2">
-                      Service of interest
+                      Dienst van interesse
                     </label>
                     <select
                       name="service"
                       className="w-full px-4 py-3 bg-surface border border-edge text-ink text-sm font-sans focus:border-gold focus:outline-none transition-colors appearance-none"
                     >
                       <option value="AI Software">AI Software &amp; SaaS</option>
-                      <option value="AI Consultancy">AI Consultancy</option>
+                      <option value="AI Consultancy">AI Advies</option>
                       <option value="Web Design">Web Design</option>
-                      <option value="Not sure">Not sure yet</option>
+                      <option value="Not sure">Nog niet zeker</option>
                     </select>
                   </div>
 
                   <div>
                     <label className="block font-display text-xs tracking-[0.18em] uppercase text-ink-dim mb-2">
-                      Message *
+                      Bericht *
                     </label>
                     <textarea
                       name="message"
                       required
                       rows={5}
-                      placeholder="Tell us about your business and what you're looking to automate..."
+                      placeholder="Vertel ons over uw bedrijf en wat u wilt automatiseren..."
                       className="w-full px-4 py-3 bg-surface border border-edge text-ink text-sm font-sans placeholder:text-ink-faint focus:border-gold focus:outline-none transition-colors resize-none"
                     />
                   </div>
@@ -193,11 +193,11 @@ export default function ContactPage() {
                     type="submit"
                     className="inline-flex items-center justify-center px-8 py-4 bg-gold text-void font-display font-bold text-sm tracking-[0.12em] uppercase transition-colors hover:bg-gold-bright"
                   >
-                    Send message →
+                    Stuur bericht →
                   </button>
 
                   <p className="text-ink-faint text-xs pt-2">
-                    This opens your email client with the message pre-filled. Hit send to submit.
+                    Dit opent uw e-mailclient met het bericht ingevuld. Klik op verzenden om in te dienen.
                   </p>
                   <p className="text-ink-faint text-xs">
                     Wij reageren binnen 24 uur op werkdagen.
@@ -208,7 +208,6 @@ export default function ContactPage() {
 
             {/* Right: contact info + next steps */}
             <motion.div variants={fadeUp} className="lg:col-span-5 space-y-10">
-              {/* Contact details */}
               <div>
                 <p className="text-gold text-xs tracking-widest uppercase font-display mb-6">
                   Direct contact
@@ -218,7 +217,7 @@ export default function ContactPage() {
                     <Mail size={16} className="text-gold mt-0.5 shrink-0" strokeWidth={1.5} />
                     <div>
                       <p className="text-ink-dim text-xs uppercase tracking-wide font-display mb-1">
-                        Email
+                        E-mail
                       </p>
                       <a
                         href="mailto:marijn@duneslab.nl"
@@ -232,21 +231,20 @@ export default function ContactPage() {
                     <Clock size={16} className="text-gold mt-0.5 shrink-0" strokeWidth={1.5} />
                     <div>
                       <p className="text-ink-dim text-xs uppercase tracking-wide font-display mb-1">
-                        Response time
+                        Reactietijd
                       </p>
-                      <p className="text-ink text-sm">Within 24 hours</p>
+                      <p className="text-ink text-sm">Binnen 24 uur</p>
                       <p className="text-ink-faint text-xs mt-0.5">
-                        Usually much faster
+                        Vaak veel sneller
                       </p>
                     </div>
                   </div>
                 </div>
               </div>
 
-              {/* What happens next */}
               <div>
                 <p className="text-gold text-xs tracking-widest uppercase font-display mb-6">
-                  What happens next
+                  Wat er daarna gebeurt
                 </p>
                 <div className="flex flex-col gap-6">
                   {nextSteps.map(({ step, title, description }) => (
@@ -267,10 +265,9 @@ export default function ContactPage() {
                 </div>
               </div>
 
-              {/* Prefer email */}
               <div className="pt-6 border-t border-edge">
                 <p className="text-ink-faint text-sm">
-                  Prefer to email directly?{' '}
+                  Liever direct mailen?{' '}
                   <a
                     href="mailto:marijn@duneslab.nl"
                     className="text-gold hover:text-gold-bright transition-colors"
@@ -286,5 +283,3 @@ export default function ContactPage() {
     </>
   )
 }
-
-

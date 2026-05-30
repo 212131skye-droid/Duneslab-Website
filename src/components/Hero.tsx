@@ -62,7 +62,7 @@ export default function Hero() {
               variants={item}
               className="text-ink-faint text-xs tracking-widest uppercase font-display mb-8"
             >
-              Premium AI Software · Netherlands
+              Premium AI Software · Nederland
             </motion.p>
 
             {/* Headline */}
@@ -93,13 +93,13 @@ export default function Hero() {
                 href="/contact"
                 className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-gold text-void font-display font-bold text-sm tracking-[0.12em] uppercase transition-colors hover:bg-gold-bright"
               >
-                Book a demo →
+                Plan een demo →
               </Link>
               <Link
                 href="/how-it-works"
                 className="inline-flex items-center justify-center gap-2 px-8 py-4 border border-gold-muted text-ink font-display font-semibold text-sm tracking-[0.12em] uppercase transition-colors hover:bg-[rgba(231,208,95,0.07)]"
               >
-                Explore platform
+                Bekijk platform
               </Link>
             </motion.div>
 

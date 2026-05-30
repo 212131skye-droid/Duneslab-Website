@@ -1,4 +1,4 @@
-﻿'use client'
+'use client'
 
 import { useState, useEffect, useRef } from 'react'
 import { motion } from 'framer-motion'
@@ -18,28 +18,28 @@ const flowSteps = [
   {
     icon: Database,
     label: 'INPUT',
-    title: 'Product selection',
-    description: 'Sales team picks products from your live database.',
+    title: 'Productselectie',
+    description: 'Uw salesteam selecteert producten uit uw live database.',
   },
   {
     icon: Zap,
     label: 'AI ENGINE',
-    title: 'Intelligent processing',
-    description: 'Duneslab AI applies pricing rules, templates and branding.',
+    title: 'Intelligente verwerking',
+    description: 'Duneslab AI past prijsregels, templates en huisstijl toe.',
     featured: true,
   },
   {
     icon: FileText,
     label: 'OUTPUT',
-    title: 'Professional PDF',
-    description: 'A client-ready quotation delivered in under 10 seconds.',
+    title: 'Professionele PDF',
+    description: 'Een klantklare offerte gegenereerd in minder dan 10 seconden.',
   },
 ]
 
 const stats = [
-  { value: '8', suffix: 's', label: 'Generation time' },
-  { value: '100', suffix: '%', label: 'Accurate every time' },
-  { value: 'Live', suffix: '', label: 'Always up to date' },
+  { value: '8', suffix: 's', label: 'Generatietijd' },
+  { value: '100', suffix: '%', label: 'Altijd accuraat' },
+  { value: 'Live', suffix: '', label: 'Altijd actueel' },
 ]
 
 function StatCounter({ value, suffix, label }: { value: string; suffix: string; label: string }) {
@@ -129,26 +129,23 @@ export default function Solution() {
           whileInView="show"
           viewport={{ once: true, margin: '-80px' }}
         >
-          {/* Heading */}
           <motion.div variants={fadeUp} className="max-w-2xl mb-16 lg:mb-20">
             <p className="text-gold text-xs tracking-widest uppercase font-display mb-5">
-              The Solution
+              De Oplossing
             </p>
             <h2 className="font-display font-bold text-4xl lg:text-5xl xl:text-6xl text-ink leading-tight mb-6">
-              Duneslab automates it.
+              Duneslab automatiseert het.
             </h2>
             <p className="text-ink-dim text-lg leading-relaxed">
-              Our AI software connects to your database and generates perfect
-              quotations in seconds — accurate, branded, and client-ready.
+              Onze AI software verbindt met uw database en genereert perfecte
+              offertes in seconden — accuraat, in uw huisstijl en klaar voor de klant.
             </p>
           </motion.div>
 
-          {/* Flow diagram */}
           <motion.div variants={fadeUp} className="mb-20">
             <div className="flex flex-col lg:flex-row items-stretch lg:items-center justify-center gap-0 lg:gap-0">
               {flowSteps.map((step, i) => (
                 <div key={step.label} className="flex flex-col lg:flex-row items-center">
-                  {/* Card */}
                   <motion.div
                     whileHover={{ scale: 1.02 }}
                     transition={{ type: 'spring', stiffness: 300, damping: 25 }}
@@ -186,7 +183,6 @@ export default function Solution() {
                     </p>
                   </motion.div>
 
-                  {/* Arrow between cards */}
                   {i < flowSteps.length - 1 && (
                     <>
                       <FlowArrow />
@@ -198,7 +194,6 @@ export default function Solution() {
             </div>
           </motion.div>
 
-          {/* Stats */}
           <motion.div
             variants={fadeUp}
             className="grid grid-cols-1 sm:grid-cols-3 gap-12 pt-12 border-t border-edge"
@@ -212,5 +207,3 @@ export default function Solution() {
     </section>
   )
 }
-
-

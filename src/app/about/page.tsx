@@ -1,4 +1,4 @@
-﻿'use client'
+'use client'
 
 import { motion } from 'framer-motion'
 import { Zap, Target, Lightbulb } from 'lucide-react'
@@ -18,21 +18,21 @@ const stagger = {
 const values = [
   {
     icon: Zap,
-    title: 'Speed',
+    title: 'Snelheid',
     description:
-      'Every tool we build is optimised for speed — both in how fast it runs and how fast it ships. We believe time is the most valuable thing a business can save.',
+      'Elk tool dat wij bouwen is geoptimaliseerd voor snelheid — zowel in hoe snel het werkt als hoe snel het geleverd wordt. Wij geloven dat tijd het meest waardevolle is wat een bedrijf kan besparen.',
   },
   {
     icon: Target,
-    title: 'Precision',
+    title: 'Precisie',
     description:
-      'Software that produces wrong output is worse than no software at all. We build for 100% accuracy every time — no approximations, no rounding errors, no excuses.',
+      'Software die verkeerde output produceert is erger dan helemaal geen software. Wij bouwen voor 100% nauwkeurigheid elke keer — geen benaderingen, geen afrondingsfouten, geen excuses.',
   },
   {
     icon: Lightbulb,
-    title: 'Innovation',
+    title: 'Innovatie',
     description:
-      'We constantly push the boundary of what business software can do. AI is not a buzzword here — it is the core of everything we build.',
+      'Wij verleggen constant de grenzen van wat zakelijke software kan doen. AI is hier geen buzzword — het is de kern van alles wat wij bouwen.',
   },
 ]
 
@@ -40,12 +40,11 @@ export default function AboutPage() {
   return (
     <>
       <PageHero
-        label="About Duneslab"
-        heading="Built Different."
-        subtext="A software company built on results, not promises."
+        label="Over Duneslab"
+        heading="Anders Gebouwd."
+        subtext="Een softwarebedrijf gebouwd op resultaten, niet op beloftes."
       />
 
-      {/* Story */}
       <section
         className="py-24 lg:py-32 border-b border-edge"
         style={{ background: 'rgba(5,5,5,0.92)' }}
@@ -60,10 +59,10 @@ export default function AboutPage() {
               className="lg:col-span-4"
             >
               <p className="text-gold text-xs tracking-widest uppercase font-display mb-5">
-                Our story
+                Ons verhaal
               </p>
               <h2 className="font-display font-bold text-3xl lg:text-4xl text-ink leading-tight">
-                Built by someone who has seen the problem first-hand.
+                Gebouwd door iemand die het probleem uit de eerste hand kent.
               </h2>
             </motion.div>
 
@@ -88,7 +87,6 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Mission */}
       <section
         className="py-24 lg:py-32 border-b border-edge"
         style={{ background: 'rgba(5,5,5,0.92)' }}
@@ -101,17 +99,15 @@ export default function AboutPage() {
             transition={{ duration: 0.75, ease: [0.16, 1, 0.3, 1] as const }}
           >
             <p className="text-gold text-xs tracking-widest uppercase font-display mb-8">
-              Our mission
+              Onze missie
             </p>
             <blockquote className="font-display font-bold text-3xl lg:text-4xl xl:text-5xl text-ink leading-tight max-w-4xl mx-auto">
-              "We believe business software should be fast, intelligent,
-              and actually work."
+              "Wij geloven dat zakelijke software snel, intelligent en daadwerkelijk effectief moet zijn."
             </blockquote>
           </motion.div>
         </div>
       </section>
 
-      {/* Values */}
       <section
         className="py-24 lg:py-32 border-b border-edge"
         style={{ background: 'rgba(5,5,5,0.92)' }}
@@ -125,10 +121,10 @@ export default function AboutPage() {
           >
             <motion.div variants={fadeUp} className="max-w-xl mb-14">
               <p className="text-gold text-xs tracking-widest uppercase font-display mb-5">
-                Our values
+                Onze waarden
               </p>
               <h2 className="font-display font-bold text-3xl lg:text-4xl text-ink leading-tight">
-                What drives every decision we make.
+                Wat elke beslissing stuurt.
               </h2>
             </motion.div>
 
@@ -154,7 +150,6 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Founder */}
       <section
         className="py-24 lg:py-32"
         style={{ background: 'rgba(5,5,5,0.92)' }}
@@ -168,10 +163,10 @@ export default function AboutPage() {
           >
             <motion.div variants={fadeUp} className="max-w-xl mb-14">
               <p className="text-gold text-xs tracking-widest uppercase font-display mb-5">
-                The team
+                Het team
               </p>
               <h2 className="font-display font-bold text-3xl lg:text-4xl text-ink leading-tight">
-                The person behind Duneslab.
+                De persoon achter Duneslab.
               </h2>
             </motion.div>
 
@@ -179,7 +174,6 @@ export default function AboutPage() {
               variants={fadeUp}
               className="flex flex-col sm:flex-row gap-8 max-w-xl p-8 border border-edge bg-surface"
             >
-              {/* Photo placeholder */}
               <div
                 className="w-20 h-20 shrink-0 flex items-center justify-center border border-gold"
                 style={{ background: 'rgba(231,208,95,0.07)' }}
@@ -194,7 +188,7 @@ export default function AboutPage() {
                   Marijn van der Heijden
                 </h3>
                 <p className="text-gold text-xs tracking-[0.2em] uppercase font-display mb-4">
-                  Founder & Developer
+                  Oprichter & Ontwikkelaar
                 </p>
                 <p className="text-ink-dim text-sm leading-relaxed">
                   Oprichter van Duneslab. Bouwt AI software en automatiseringstools
@@ -213,13 +207,11 @@ export default function AboutPage() {
       </section>
 
       <CTAStrip
-        heading="Want to work with us?"
-        subtext="Book a free 30-minute call and let's talk about what we can build together."
-        buttonLabel="Get in touch →"
+        heading="Wilt u met ons samenwerken?"
+        subtext="Plan een gratis gesprek van 30 minuten en laten we bespreken wat we samen kunnen bouwen."
+        buttonLabel="Neem contact op →"
         buttonHref="/contact"
       />
     </>
   )
 }
-
-

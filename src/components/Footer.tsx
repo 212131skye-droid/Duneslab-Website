@@ -20,17 +20,17 @@ const columns = [
   {
     label: 'Product',
     links: [
-      { label: 'AI Quotation Tool', href: '/how-it-works' },
-      { label: 'Features', href: '/solutions' },
-      { label: 'How it works', href: '/how-it-works' },
-      { label: 'Pricing', href: '/pricing' },
+      { label: 'AI Offertetool', href: '/how-it-works' },
+      { label: 'Functies', href: '/solutions' },
+      { label: 'Hoe het werkt', href: '/how-it-works' },
+      { label: 'Prijzen', href: '/pricing' },
     ],
   },
   {
-    label: 'Company',
+    label: 'Bedrijf',
     links: [
-      { label: 'About Duneslab', href: '/about' },
-      { label: 'AI Consultancy', href: '/solutions' },
+      { label: 'Over Duneslab', href: '/about' },
+      { label: 'AI Advies', href: '/solutions' },
       { label: 'Web Design', href: '/solutions' },
       { label: 'Contact', href: '/contact' },
     ],
@@ -39,8 +39,8 @@ const columns = [
     label: 'Contact',
     links: [
       { label: 'marijn@duneslab.nl', href: 'mailto:marijn@duneslab.nl', external: true },
-      { label: 'Book a demo', href: '/contact' },
-      { label: 'Netherlands', href: '#', external: true },
+      { label: 'Plan een demo', href: '/contact' },
+      { label: 'Nederland', href: '#', external: true },
     ],
   },
 ]
@@ -52,7 +52,6 @@ export default function Footer() {
       style={{ background: 'rgba(8,8,8,0.97)' }}
     >
       <div className="max-w-7xl mx-auto px-6 lg:px-12">
-        {/* Main footer content */}
         <motion.div
           initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -60,12 +59,11 @@ export default function Footer() {
           transition={{ duration: 0.65, ease: [0.16, 1, 0.3, 1] as const }}
           className="py-16 lg:py-20 grid grid-cols-1 lg:grid-cols-12 gap-12"
         >
-          {/* Brand column */}
           <div className="lg:col-span-4">
             <Logo />
             <p className="text-ink-faint text-sm leading-relaxed mt-5 max-w-xs">
-              AI Software For Modern Business Workflows. Built in the Netherlands
-              for B2B enterprises that demand precision and speed.
+              AI Software voor moderne bedrijfsprocessen. Gebouwd in Nederland
+              voor B2B bedrijven die precisie en snelheid eisen.
             </p>
             <p className="text-ink-faint text-xs mt-6">
               <a
@@ -77,7 +75,6 @@ export default function Footer() {
             </p>
           </div>
 
-          {/* Link columns */}
           <div className="lg:col-span-8 grid grid-cols-1 sm:grid-cols-3 gap-10">
             {columns.map((col) => (
               <div key={col.label}>
@@ -110,15 +107,14 @@ export default function Footer() {
           </div>
         </motion.div>
 
-        {/* Bottom bar */}
         <div className="py-6 border-t border-edge flex flex-col sm:flex-row items-center justify-between gap-4">
           <div className="flex flex-col sm:flex-row items-center gap-3">
             <p className="text-xs" style={{ color: '#6A6A6A' }}>
-              © 2026 Duneslab. All rights reserved.
+              © 2026 Duneslab. Alle rechten voorbehouden.
             </p>
           </div>
           <p className="text-xs" style={{ color: '#6A6A6A' }}>
-            Built by{' '}
+            Gebouwd door{' '}
             <a
               href="mailto:marijn@duneslab.nl"
               className="text-gold-muted hover:text-gold transition-colors"
@@ -131,4 +127,3 @@ export default function Footer() {
     </footer>
   )
 }
-

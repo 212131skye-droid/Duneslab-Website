@@ -1,4 +1,4 @@
-﻿'use client'
+'use client'
 
 import { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
@@ -22,82 +22,82 @@ const plans = [
     name: 'Starter',
     price: '€595',
     period: '/mo',
-    setup: '+ €9.500 one-time setup',
-    description: 'Everything you need to automate quotation generation.',
+    setup: '+ €9.500 eenmalige setup',
+    description: 'Alles wat u nodig heeft om offertegeneratie te automatiseren.',
     featured: false,
     features: [
-      'AI quotation generation',
-      'Product database sync',
-      'Professional PDF export',
-      'Email support',
-      'Up to 200 quotations/mo',
-      'Standard templates',
+      'AI offertegeneratie',
+      'Productdatabase synchronisatie',
+      'Professionele PDF export',
+      'E-mailondersteuning',
+      'Tot 200 offertes/maand',
+      'Standaard templates',
     ],
-    cta: 'Get started',
+    cta: 'Aan de slag',
   },
   {
     name: 'Professional',
     price: '€595',
     period: '/mo',
-    setup: '+ €195/mo SLA · €9.500 one-time setup',
-    description: 'Priority support and advanced analytics for growing teams.',
+    setup: '+ €195/mo SLA · €9.500 eenmalige setup',
+    description: 'Prioriteitsondersteuning en uitgebreide analyses voor groeiende teams.',
     featured: true,
     features: [
-      'Everything in Starter',
-      'Priority support (4hr response)',
-      'Advanced analytics dashboard',
-      'Custom branding & templates',
-      'Unlimited quotations',
-      'SLA monitoring',
+      'Alles uit Starter',
+      'Prioriteitsondersteuning (4 uur reactietijd)',
+      'Uitgebreid analysedashboard',
+      'Eigen huisstijl & templates',
+      'Onbeperkte offertes',
+      'SLA-monitoring',
     ],
-    cta: 'Get started',
-    badge: 'MOST POPULAR',
+    cta: 'Aan de slag',
+    badge: 'MEEST GEKOZEN',
   },
   {
     name: 'Enterprise',
-    price: 'Custom',
+    price: 'Maatwerk',
     period: '',
-    setup: '+ €3.500 integration fee',
-    description: 'Full integration, dedicated onboarding and SLA guarantees.',
+    setup: '+ €3.500 integratievergoeding',
+    description: 'Volledige integratie, toegewijde onboarding en SLA-garanties.',
     featured: false,
     features: [
-      'Everything in Professional',
-      'ERP / server integration',
-      'Dedicated onboarding manager',
-      'Custom SLA guarantee',
-      'White-label option',
-      'API access',
+      'Alles uit Professional',
+      'ERP / server-integratie',
+      'Vaste onboardingmanager',
+      'Aangepaste SLA-garantie',
+      'White-label optie',
+      'API-toegang',
     ],
-    cta: 'Contact us',
+    cta: 'Neem contact op',
     note: 'Integratie met Exact, AFAS, SAP, WooCommerce, MySQL, PostgreSQL',
   },
 ]
 
 const pricingFaqs = [
   {
-    question: 'What is included in the one-time setup fee?',
+    question: 'Wat is inbegrepen in de eenmalige setupkosten?',
     answer:
-      'The setup fee covers initial integration with your product database or ERP system, configuration of your PDF templates and pricing logic, team onboarding and training, and a full QA round before go-live. It is a one-time investment — no recurring charges for setup work.',
+      'De setupkosten dekken de initiële integratie met uw productdatabase of ERP-systeem, configuratie van uw PDF-templates en prijslogica, teamtraining en een volledige QA-ronde vóór livegang. Het is een eenmalige investering — geen terugkerende kosten voor setupwerk.',
   },
   {
-    question: 'Can I change plans later?',
+    question: 'Kan ik later van abonnement wisselen?',
     answer:
-      'Yes. You can upgrade from Starter to Professional at any time — the price difference is prorated from your next billing cycle. Downgrading is available at the end of your contract term.',
+      'Ja. U kunt op elk moment upgraden van Starter naar Professional — het prijsverschil wordt pro rata verrekend per volgende factuurperiode. Downgraden is mogelijk aan het einde van uw contractperiode.',
   },
   {
-    question: 'What does the minimum 12-month contract include?',
+    question: 'Wat omvat het minimale contract van 12 maanden?',
     answer:
-      'The 12-month contract includes access to the software, all updates, email support (Starter) or priority support (Professional), and hosting. After 12 months, contracts roll to a monthly arrangement with 30 days notice to cancel.',
+      'Het 12-maandencontract omvat toegang tot de software, alle updates, e-mailondersteuning (Starter) of prioriteitsondersteuning (Professional) en hosting. Na 12 maanden loopt het contract maandelijks door met een opzegtermijn van 30 dagen.',
   },
   {
-    question: 'Are there usage limits on the Starter plan?',
+    question: 'Zijn er gebruikslimieten op het Starter-abonnement?',
     answer:
-      'Starter is capped at 200 generated quotations per month, which covers most small and medium sales teams. If you exceed this regularly, Professional with unlimited quotations will be more cost-effective.',
+      'Starter is beperkt tot 200 gegenereerde offertes per maand, wat de meeste kleine en middelgrote salesteams dekt. Als u dit regelmatig overschrijdt, is Professional met onbeperkte offertes voordeliger.',
   },
   {
-    question: 'Do prices exclude VAT?',
+    question: 'Zijn prijzen exclusief BTW?',
     answer:
-      'Yes, all prices shown are exclusive of VAT (BTW). Dutch VAT at 21% applies for Netherlands-based clients. EU B2B clients with a valid VAT number can use the reverse charge mechanism.',
+      'Ja, alle getoonde prijzen zijn exclusief BTW. Voor Nederlandse klanten geldt 21% BTW. EU B2B-klanten met een geldig BTW-nummer kunnen gebruikmaken van de verleggingsregeling.',
   },
 ]
 
@@ -156,12 +156,11 @@ export default function PricingPage() {
   return (
     <>
       <PageHero
-        label="Pricing"
-        heading="Transparent Pricing."
-        subtext="No hidden costs. No surprises. Choose the plan that fits your team."
+        label="Prijzen"
+        heading="Transparante Prijzen."
+        subtext="Geen verborgen kosten. Geen verrassingen. Kies het abonnement dat bij uw team past."
       />
 
-      {/* Pricing cards */}
       <section
         className="py-24 lg:py-32"
         style={{ background: 'rgba(5,5,5,0.92)' }}
@@ -243,13 +242,12 @@ export default function PricingPage() {
               ))}
             </div>
             <motion.p variants={fadeUp} className="text-ink-faint text-xs text-center">
-              All prices exclude VAT. Minimum contract: 12 months. Custom pricing available for high-volume usage.
+              Alle prijzen zijn exclusief BTW. Minimale contractduur: 12 maanden. Maatwerktarieven beschikbaar voor hoge volumes.
             </motion.p>
           </motion.div>
         </div>
       </section>
 
-      {/* Pricing FAQ */}
       <section
         className="py-24 lg:py-32 border-t border-edge"
         style={{ background: 'rgba(5,5,5,0.92)' }}
@@ -264,17 +262,17 @@ export default function PricingPage() {
               className="lg:col-span-4"
             >
               <p className="text-gold text-xs tracking-widest uppercase font-display mb-5">
-                Pricing FAQ
+                Veelgestelde vragen
               </p>
               <h2 className="font-display font-bold text-3xl lg:text-4xl text-ink leading-tight mb-6">
-                Questions about pricing.
+                Vragen over prijzen.
               </h2>
               <p className="text-ink-dim text-base leading-relaxed">
-                Still unsure?{' '}
+                Nog twijfels?{' '}
                 <Link href="/contact" className="text-gold hover:text-gold-bright transition-colors">
-                  Talk to us directly
+                  Spreek ons direct aan
                 </Link>{' '}
-                and we will find the right fit together.
+                en wij vinden samen de juiste oplossing.
               </p>
             </motion.div>
             <motion.div
@@ -299,15 +297,13 @@ export default function PricingPage() {
       </section>
 
       <CTAStrip
-        heading="Ready to get started?"
-        subtext="Book a free 30-minute demo and see the platform live. No commitment required."
-        buttonLabel="Book a demo →"
+        heading="Klaar om te beginnen?"
+        subtext="Plan een gratis demo van 30 minuten en zie het platform live. Geen verplichtingen."
+        buttonLabel="Plan een demo →"
         buttonHref="/contact"
-        secondaryLabel="View solutions"
+        secondaryLabel="Bekijk oplossingen"
         secondaryHref="/solutions"
       />
     </>
   )
 }
-
-

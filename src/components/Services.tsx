@@ -1,4 +1,4 @@
-﻿'use client'
+'use client'
 
 import Link from 'next/link'
 import { motion } from 'framer-motion'
@@ -17,26 +17,26 @@ const stagger = {
 const services = [
   {
     icon: Cpu,
-    tag: 'FLAGSHIP',
+    tag: 'VLAGGENSCHIP',
     title: 'AI Software & SaaS',
     description:
-      'Custom AI-powered software that automates your core business processes. From intelligent quotation tools to full workflow automation — built for B2B enterprises that demand speed and precision.',
+      'Op maat gemaakte AI-software die uw kernprocessen automatiseert. Van intelligente offertetools tot volledige workflowautomatisering — gebouwd voor B2B bedrijven die snelheid en precisie eisen.',
     featured: true,
   },
   {
     icon: Lightbulb,
-    tag: 'STRATEGY',
-    title: 'AI Consultancy',
+    tag: 'STRATEGIE',
+    title: 'AI Advies',
     description:
-      "Not sure where to start with AI? We analyse your workflows, identify automation opportunities, and build a clear implementation roadmap tailored to your business.",
+      'Weet u niet waar u met AI moet beginnen? Wij analyseren uw workflows, identificeren automatiseringsmogelijkheden en stellen een duidelijk implementatieplan op voor uw bedrijf.',
     featured: false,
   },
   {
     icon: Monitor,
-    tag: 'DIGITAL',
+    tag: 'DIGITAAL',
     title: 'Web Design',
     description:
-      'Professional, conversion-focused websites. Clean code, fast loading, and built to grow your business online. No templates — every site is designed from the ground up.',
+      'Professionele, conversiegerichte websites. Schone code, snelle laadtijd en gebouwd om uw bedrijf online te laten groeien. Geen templates — elke site wordt van nul ontworpen.',
     featured: false,
   },
 ]
@@ -55,17 +55,15 @@ export default function Services() {
           whileInView="show"
           viewport={{ once: true, margin: '-80px' }}
         >
-          {/* Heading */}
           <motion.div variants={fadeUp} className="max-w-xl mb-16 lg:mb-20">
             <p className="text-gold text-xs tracking-widest uppercase font-display mb-5">
-              Services
+              Diensten
             </p>
             <h2 className="font-display font-bold text-4xl lg:text-5xl xl:text-6xl text-ink leading-tight">
-              What we build.
+              Wat wij bouwen.
             </h2>
           </motion.div>
 
-          {/* Featured card — AI Software, full width */}
           {(() => {
             const { icon: Icon, tag, title, description } = services[0]
             return (
@@ -94,14 +92,13 @@ export default function Services() {
                     href="/solutions"
                     className="inline-flex items-center gap-2 px-8 py-4 bg-gold text-void font-display font-bold text-sm tracking-wide uppercase transition-colors hover:bg-gold-bright"
                   >
-                    Learn more →
+                    Meer informatie →
                   </Link>
                 </div>
               </motion.div>
             )
           })()}
 
-          {/* Secondary cards — 2-col */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
             {services.slice(1).map(({ icon: Icon, tag, title, description }) => (
               <motion.div
@@ -129,7 +126,7 @@ export default function Services() {
                     href="/solutions"
                     className="font-display font-semibold text-sm tracking-wide text-ink-dim hover:text-gold transition-colors"
                   >
-                    Learn more →
+                    Meer informatie →
                   </Link>
                 </div>
               </motion.div>
@@ -140,5 +137,3 @@ export default function Services() {
     </section>
   )
 }
-
-

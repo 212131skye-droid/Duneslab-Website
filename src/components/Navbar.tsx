@@ -8,9 +8,9 @@ import { Menu, X } from 'lucide-react'
 
 const navLinks = [
   { label: 'Product', href: '/how-it-works' },
-  { label: 'Solutions', href: '/solutions' },
-  { label: 'Pricing', href: '/pricing' },
-  { label: 'About', href: '/about' },
+  { label: 'Oplossingen', href: '/solutions' },
+  { label: 'Prijzen', href: '/pricing' },
+  { label: 'Over ons', href: '/about' },
   { label: 'Contact', href: '/contact' },
 ]
 
@@ -84,7 +84,7 @@ export default function Navbar() {
               href="/contact"
               className="px-5 py-2.5 bg-gold text-void font-display font-semibold text-sm tracking-wide transition-colors hover:bg-gold-bright"
             >
-              Book a demo
+              Plan een demo
             </Link>
           </div>
 
@@ -129,7 +129,7 @@ export default function Navbar() {
                 href="/contact"
                 className="mt-2 inline-flex items-center justify-center px-6 py-3 bg-gold text-void font-display font-semibold text-sm tracking-wide hover:bg-gold-bright transition-colors"
               >
-                Book a demo
+                Plan een demo
               </Link>
             </div>
           </motion.div>

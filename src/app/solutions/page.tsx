@@ -17,58 +17,58 @@ const stagger = {
 }
 
 const aiSoftwareFeatures = [
-  'Live product database integration (ERP, SQL, CSV)',
-  'AI-powered pricing rules engine with margin control',
-  'Branded PDF generation in under 10 seconds',
-  'Multi-user access for your full sales team',
-  'Quote version history and revision tracking',
-  'One-click email delivery to clients',
-  'Real-time dashboard with deal status tracking',
-  'ERP and CRM integration (Exact, AFAS, SAP)',
-  'Custom branding and layout per template',
-  'GDPR-compliant data handling and storage',
+  'Live productdatabase-integratie (ERP, SQL, CSV)',
+  'AI-aangedreven prijsregelengine met margefunctie',
+  'Branded PDF-generatie in minder dan 10 seconden',
+  'Multi-user toegang voor uw volledige salesteam',
+  'Offerteversiegeschiedenis en revisiebeheer',
+  'E-mailbezorging naar klanten met één klik',
+  'Realtime dashboard met dealprogress-tracking',
+  'ERP- en CRM-integratie (Exact, AFAS, SAP)',
+  'Eigen huisstijl en layout per template',
+  'AVG-conforme dataverwerking en -opslag',
 ]
 
 const consultancySteps = [
   {
     number: '01',
-    title: 'Discovery call',
+    title: 'Kennismakingsgesprek',
     description:
-      '90-minute session to map your current workflows, understand your bottlenecks and identify where automation delivers the most value.',
+      'Sessie van 90 minuten om uw huidige workflows in kaart te brengen, uw knelpunten te begrijpen en te identificeren waar automatisering de meeste waarde oplevert.',
   },
   {
     number: '02',
-    title: 'Process audit',
+    title: 'Procesanalyse',
     description:
-      'We analyse your tools, data flows and team habits. Every manual step that can be automated is documented with an estimated time and cost saving.',
+      'Wij analyseren uw tools, datastromen en teamgewoonten. Elke handmatige stap die geautomatiseerd kan worden, wordt gedocumenteerd met een geschatte tijd- en kostenbesparing.',
   },
   {
     number: '03',
     title: 'Roadmap',
     description:
-      'A prioritised list of automation opportunities, each with ROI estimates, technical requirements and a recommended implementation order.',
+      'Een geprioriteerde lijst met automatiseringsmogelijkheden, elk met ROI-schattingen, technische vereisten en een aanbevolen implementatievolgorde.',
   },
   {
     number: '04',
     title: 'Proof of concept',
     description:
-      'We build a small, working automation to demonstrate value before committing to a full rollout. You see it work before you invest.',
+      'Wij bouwen een kleine, werkende automatisering om de waarde aan te tonen vóór een volledige uitrol. U ziet het werken voordat u investeert.',
   },
   {
     number: '05',
-    title: 'Full rollout',
+    title: 'Volledige uitrol',
     description:
-      'Implementation, testing, and team training. We handle every step and stay available for questions after go-live.',
+      'Implementatie, testen en teamtraining. Wij verzorgen elke stap en blijven beschikbaar voor vragen na de livegang.',
   },
 ]
 
 const webDesignIncludes = [
-  'Custom design from zero — no templates, ever',
-  'Mobile-first, fully responsive layout',
-  'SEO-optimised structure and metadata',
-  'Core Web Vitals optimised (LCP, CLS, FID)',
-  'CMS integration (Sanity, Contentful) on request',
-  '6 months of post-launch support and updates',
+  'Volledig maatwerk ontwerp — nooit templates',
+  'Mobile-first, volledig responsieve layout',
+  'SEO-geoptimaliseerde structuur en metadata',
+  'Core Web Vitals geoptimaliseerd (LCP, CLS, FID)',
+  'CMS-integratie (Sanity, Contentful) op verzoek',
+  '6 maanden post-launch ondersteuning en updates',
 ]
 
 const webTechStack = ['Next.js', 'TypeScript', 'Tailwind CSS', 'Vercel', 'Framer Motion']
@@ -77,12 +77,11 @@ export default function SolutionsPage() {
   return (
     <>
       <PageHero
-        label="Solutions"
-        heading="What We Build."
-        subtext="Three core services, one mission: make your business faster and smarter."
+        label="Oplossingen"
+        heading="Wat Wij Bouwen."
+        subtext="Drie kernservices, één missie: uw bedrijf sneller en slimmer maken."
       />
 
-      {/* AI Software */}
       <section
         className="py-24 lg:py-32 border-b border-edge"
         style={{ background: 'rgba(5,5,5,0.92)' }}
@@ -97,7 +96,7 @@ export default function SolutionsPage() {
           >
             <motion.div variants={fadeUp}>
               <span className="inline-block font-display font-bold text-[9px] tracking-[0.28em] uppercase px-2 py-1 mb-6 text-void bg-gold">
-                FLAGSHIP
+                VLAGGENSCHIP
               </span>
               <div className="flex items-center gap-3 mb-6">
                 <Cpu size={28} className="text-gold" strokeWidth={1.5} />
@@ -106,28 +105,28 @@ export default function SolutionsPage() {
                 </h2>
               </div>
               <p className="text-ink-dim text-lg leading-relaxed mb-6">
-                Our flagship product automates the entire quotation workflow. Sales teams
-                select products from a clean interface, and our AI engine generates a
-                perfect, branded PDF quotation in under 10 seconds — pulling live prices
-                directly from your database.
+                Ons vlaggenschipproduct automatiseert het volledige offerteproces. Salesteams
+                selecteren producten via een overzichtelijke interface, waarna onze AI-engine
+                een perfecte, branded PDF-offerte genereert in minder dan 10 seconden — met
+                live prijzen direct uit uw database.
               </p>
               <p className="text-ink-dim text-base leading-relaxed mb-10">
-                Built specifically for B2B enterprises that handle high volumes of custom
-                quotations. No generic SaaS tool you have to bend into shape — this is
-                engineered around your workflow, your data, and your brand.
+                Specifiek gebouwd voor B2B bedrijven die grote volumes maatwerk offertes verwerken.
+                Geen generieke SaaS-tool die u zelf moet ombuigen — dit is ontworpen rondom
+                uw workflow, uw data en uw huisstijl.
               </p>
               <Link
                 href="/how-it-works"
                 className="inline-flex items-center gap-2 text-gold font-display font-semibold text-sm tracking-wide hover:text-gold-bright transition-colors"
               >
-                See how it works <ArrowRight size={14} />
+                Zie hoe het werkt <ArrowRight size={14} />
               </Link>
             </motion.div>
 
             <motion.div variants={fadeUp}>
               <div className="p-8 border border-edge bg-surface">
                 <p className="font-display font-bold text-xs tracking-[0.2em] uppercase text-gold mb-6">
-                  What's included
+                  Wat is inbegrepen
                 </p>
                 <ul className="flex flex-col gap-3">
                   {aiSoftwareFeatures.map((f) => (
@@ -143,7 +142,6 @@ export default function SolutionsPage() {
         </div>
       </section>
 
-      {/* AI Consultancy */}
       <section
         className="py-24 lg:py-32 border-b border-edge"
         style={{ background: 'rgba(5,5,5,0.92)' }}
@@ -157,19 +155,19 @@ export default function SolutionsPage() {
           >
             <motion.div variants={fadeUp} className="max-w-2xl mb-14">
               <span className="inline-block font-display font-bold text-[9px] tracking-[0.28em] uppercase px-2 py-1 mb-6 text-gold border border-gold-muted">
-                STRATEGY
+                STRATEGIE
               </span>
               <div className="flex items-center gap-3 mb-6">
                 <Lightbulb size={28} className="text-ink-dim" strokeWidth={1.5} />
                 <h2 className="font-display font-bold text-3xl lg:text-4xl text-ink">
-                  AI Consultancy
+                  AI Advies
                 </h2>
               </div>
               <p className="text-ink-dim text-lg leading-relaxed">
-                Not sure where AI fits in your business — or where to start? We map your
-                current workflows, identify the highest-value automation opportunities, and
-                build you a clear, actionable roadmap. No jargon, no hype. Just a plan
-                that actually makes sense for your team.
+                Weet u niet waar AI past in uw bedrijf — of waar u moet beginnen? Wij brengen
+                uw huidige workflows in kaart, identificeren de meest waardevolle
+                automatiseringsmogelijkheden en stellen een helder, uitvoerbaar plan op.
+                Geen jargon, geen hype. Gewoon een plan dat echt werkt voor uw team.
               </p>
             </motion.div>
 
@@ -196,7 +194,6 @@ export default function SolutionsPage() {
         </div>
       </section>
 
-      {/* Web Design */}
       <section
         className="py-24 lg:py-32"
         style={{ background: 'rgba(5,5,5,0.92)' }}
@@ -211,7 +208,7 @@ export default function SolutionsPage() {
           >
             <motion.div variants={fadeUp}>
               <span className="inline-block font-display font-bold text-[9px] tracking-[0.28em] uppercase px-2 py-1 mb-6 text-gold border border-gold-muted">
-                DIGITAL
+                DIGITAAL
               </span>
               <div className="flex items-center gap-3 mb-6">
                 <Monitor size={28} className="text-ink-dim" strokeWidth={1.5} />
@@ -220,14 +217,14 @@ export default function SolutionsPage() {
                 </h2>
               </div>
               <p className="text-ink-dim text-lg leading-relaxed mb-6">
-                Professional, conversion-focused websites built from the ground up.
-                Every site we design starts from a blank canvas — no templates, no
-                page builders, no compromises on quality.
+                Professionele, conversiegerichte websites gebouwd van nul.
+                Elke site die wij ontwerpen start vanaf een leeg canvas — geen templates, geen
+                pagebuilders, geen compromissen op kwaliteit.
               </p>
               <p className="text-ink-dim text-base leading-relaxed mb-10">
-                We use the same technology stack we build our own products on:
-                fast, clean, and designed to rank. Sites are delivered with
-                six months of support included.
+                Wij gebruiken dezelfde technologiestack als onze eigen producten:
+                snel, schoon en ontworpen om hoog te scoren. Sites worden geleverd met
+                zes maanden ondersteuning inbegrepen.
               </p>
               <div className="flex flex-wrap gap-2">
                 {webTechStack.map((tech) => (
@@ -244,7 +241,7 @@ export default function SolutionsPage() {
             <motion.div variants={fadeUp}>
               <div className="p-8 border border-edge bg-surface">
                 <p className="font-display font-bold text-xs tracking-[0.2em] uppercase text-ink-dim mb-6">
-                  What's included
+                  Wat is inbegrepen
                 </p>
                 <ul className="flex flex-col gap-3">
                   {webDesignIncludes.map((f) => (
@@ -261,14 +258,13 @@ export default function SolutionsPage() {
       </section>
 
       <CTAStrip
-        heading="Interested in working together?"
-        subtext="Book a free call and we'll discuss which service fits your goals best."
-        buttonLabel="Book a call →"
+        heading="Interesse in samenwerken?"
+        subtext="Plan een gratis gesprek en wij bespreken welke dienst het beste bij uw doelen past."
+        buttonLabel="Plan een gesprek →"
         buttonHref="/contact"
-        secondaryLabel="View pricing"
+        secondaryLabel="Bekijk prijzen"
         secondaryHref="/pricing"
       />
     </>
   )
 }
-

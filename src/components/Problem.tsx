@@ -1,4 +1,4 @@
-﻿'use client'
+'use client'
 
 import { motion } from 'framer-motion'
 import { Clock, AlertTriangle, TrendingDown } from 'lucide-react'
@@ -16,21 +16,21 @@ const stagger = {
 const painPoints = [
   {
     icon: Clock,
-    title: 'Hours wasted',
+    title: 'Uren verspild',
     description:
-      'Manual quotation creation takes 2–4 hours per client. Your sales team spends more time formatting than closing.',
+      'Handmatig offertes maken kost 2–4 uur per klant. Uw salesteam besteedt meer tijd aan opmaken dan aan verkopen.',
   },
   {
     icon: AlertTriangle,
-    title: 'Human errors',
+    title: 'Menselijke fouten',
     description:
-      'Wrong prices, outdated products, inconsistent formatting. Every manual quote is a liability waiting to happen.',
+      'Verkeerde prijzen, verouderde producten, inconsistente opmaak. Elke handmatige offerte is een risico dat op zijn beurt wacht.',
   },
   {
     icon: TrendingDown,
-    title: 'Missed revenue',
+    title: 'Gemiste omzet',
     description:
-      'Slow proposals mean lost deals. Faster competitors close while your quote is still being built.',
+      'Trage offertes betekenen verloren deals. Snellere concurrenten sluiten terwijl uw offerte nog wordt samengesteld.',
   },
 ]
 
@@ -47,21 +47,19 @@ export default function Problem() {
           whileInView="show"
           viewport={{ once: true, margin: '-80px' }}
         >
-          {/* Heading */}
           <motion.div variants={fadeUp} className="max-w-2xl mb-16 lg:mb-20">
             <p className="text-gold text-xs tracking-widest uppercase font-display mb-5">
-              The Problem
+              Het Probleem
             </p>
             <h2 className="font-display font-bold text-4xl lg:text-5xl xl:text-6xl text-ink leading-tight mb-6">
-              Your team is losing hours on manual work.
+              Uw team verliest uren aan handmatig werk.
             </h2>
             <p className="text-ink-dim text-lg leading-relaxed">
-              Quotations, proposals and workflows still handled by hand.
-              Error-prone, time-consuming, and holding your revenue back.
+              Offertes, voorstellen en workflows nog steeds handmatig verwerkt.
+              Foutgevoelig, tijdrovend en een rem op uw omzet.
             </p>
           </motion.div>
 
-          {/* Pain point cards */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
             {painPoints.map(({ icon: Icon, title, description }) => (
               <motion.div
@@ -71,7 +69,6 @@ export default function Problem() {
                 transition={{ type: 'spring', stiffness: 300, damping: 25 }}
                 className="group relative p-8 border border-edge bg-surface transition-colors duration-300 hover:border-gold"
               >
-                {/* Gold top accent line */}
                 <div className="absolute top-0 left-0 right-0 h-px bg-gold opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
 
                 <div className="w-10 h-10 flex items-center justify-center mb-6">
@@ -92,5 +89,3 @@ export default function Problem() {
     </section>
   )
 }
-
-

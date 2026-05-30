@@ -1,4 +1,4 @@
-﻿'use client'
+'use client'
 
 import Link from 'next/link'
 import { motion } from 'framer-motion'
@@ -16,27 +16,27 @@ const stagger = {
 const steps = [
   {
     number: '01',
-    title: 'Connect',
+    title: 'Verbinden',
     description:
-      'We integrate with your existing product database, ERP system or price list. No restructuring required — we work with what you have.',
+      'Wij integreren met uw bestaande productdatabase, ERP-systeem of prijslijst. Geen herstructurering nodig — wij werken met wat u al heeft.',
   },
   {
     number: '02',
-    title: 'Configure',
+    title: 'Configureren',
     description:
-      'Set your PDF templates, pricing logic and branding once. Duneslab learns your business rules so every output matches your standards.',
+      'Stel eenmalig uw PDF-templates, prijslogica en huisstijl in. Duneslab leert uw bedrijfsregels zodat elke output aan uw standaarden voldoet.',
   },
   {
     number: '03',
-    title: 'Generate',
+    title: 'Genereren',
     description:
-      'Your sales team selects products from a clean interface. The AI builds a complete, accurate quotation in under 10 seconds.',
+      'Uw salesteam selecteert producten via een overzichtelijke interface. De AI bouwt een complete, accurate offerte in minder dan 10 seconden.',
   },
   {
     number: '04',
-    title: 'Close',
+    title: 'Afsluiten',
     description:
-      'Send a professional PDF to the client with one click. Track proposal status, follow-ups and deal progression in your dashboard.',
+      'Stuur met één klik een professionele PDF naar de klant. Volg offertestatussen, follow-ups en dealprogress via uw dashboard.',
   },
 ]
 
@@ -53,19 +53,16 @@ export default function HowItWorks() {
           whileInView="show"
           viewport={{ once: true, margin: '-80px' }}
         >
-          {/* Heading */}
           <motion.div variants={fadeUp} className="max-w-xl mb-16 lg:mb-24">
             <p className="text-gold text-xs tracking-widest uppercase font-display mb-5">
-              How it works
+              Hoe het werkt
             </p>
             <h2 className="font-display font-bold text-4xl lg:text-5xl xl:text-6xl text-ink leading-tight">
-              From database to deal. In seconds.
+              Van database naar deal. In seconden.
             </h2>
           </motion.div>
 
-          {/* Steps */}
           <div className="relative">
-            {/* Connecting line — desktop only */}
             <div
               className="hidden xl:block absolute h-px pointer-events-none"
               style={{
@@ -98,21 +95,20 @@ export default function HowItWorks() {
             </div>
           </div>
 
-          {/* Bottom CTA */}
           <motion.div
             variants={fadeUp}
             className="mt-14 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6 pt-10 border-t border-edge"
           >
             <p className="text-ink-dim text-base max-w-md">
-              Implementation typically takes{' '}
-              <span className="text-ink font-semibold">2–4 weeks</span>. We
-              handle onboarding, integration and training end-to-end.
+              Implementatie duurt doorgaans{' '}
+              <span className="text-ink font-semibold">2–4 weken</span>. Wij
+              verzorgen onboarding, integratie en training van A tot Z.
             </p>
             <Link
               href="/contact"
               className="shrink-0 px-8 py-4 bg-gold text-void font-display font-bold text-sm tracking-[0.12em] uppercase transition-colors hover:bg-gold-bright"
             >
-              Book a demo →
+              Plan een demo →
             </Link>
           </motion.div>
         </motion.div>
@@ -120,5 +116,3 @@ export default function HowItWorks() {
     </section>
   )
 }
-
-

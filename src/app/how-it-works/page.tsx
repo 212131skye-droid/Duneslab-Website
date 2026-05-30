@@ -1,4 +1,4 @@
-﻿'use client'
+'use client'
 
 import { motion } from 'framer-motion'
 import { Database, Zap, FileText, Send, Server, Code, Globe, Check } from 'lucide-react'
@@ -19,71 +19,71 @@ const steps = [
   {
     number: '01',
     icon: Database,
-    title: 'Connect',
-    subtitle: 'We integrate with your data',
+    title: 'Verbinden',
+    subtitle: 'Wij integreren met uw data',
     description:
-      'Duneslab connects directly to your product database, ERP system, or price list. No restructuring required — we work with your existing data structure, whether that is a cloud ERP, a local SQL server, or a shared spreadsheet.',
+      'Duneslab verbindt direct met uw productdatabase, ERP-systeem of prijslijst. Geen herstructurering nodig — wij werken met uw bestaande datastructuur, of dat nu een cloud ERP is, een lokale SQL-server of een gedeeld spreadsheet.',
     details: [
-      'Compatible with all major ERP and database systems',
-      'Secure read-only connection — we never modify your data',
-      'Live sync: price and stock changes reflect instantly in quotes',
-      'Typically completed in the first week of implementation',
+      'Compatibel met alle gangbare ERP- en databasesystemen',
+      'Beveiligde alleen-lezen verbinding — wij wijzigen uw data nooit',
+      'Live synchronisatie: prijs- en voorraadwijzigingen worden direct verwerkt',
+      'Doorgaans afgerond in de eerste implementatieweek',
     ],
   },
   {
     number: '02',
     icon: Zap,
-    title: 'Configure',
-    subtitle: 'Your rules, your brand',
+    title: 'Configureren',
+    subtitle: 'Uw regels, uw huisstijl',
     description:
-      'Once connected, we configure the intelligence layer. This includes your pricing rules, margin logic, discount structures, and PDF template design. Everything is set once, and then runs automatically for every quote thereafter.',
+      'Na de verbinding configureren wij de intelligentielaag. Dit omvat uw prijsregels, margelogica, kortingsstructuren en PDF-templateontwerp. Alles wordt eenmalig ingesteld en werkt daarna automatisch voor elke offerte.',
     details: [
-      'Multi-tier pricing rules (volume discounts, client tiers, margins)',
-      'Custom PDF templates matching your brand identity exactly',
-      'Multiple templates for different product categories or client types',
-      'Logic tested and validated before going live',
+      'Meervoudige prijsregels (volumekortingen, klanttiers, marges)',
+      'Eigen PDF-templates die precies aansluiten bij uw huisstijl',
+      'Meerdere templates voor verschillende productcategorieën of klanttypes',
+      'Logica getest en gevalideerd vóór livegang',
     ],
   },
   {
     number: '03',
     icon: FileText,
-    title: 'Generate',
-    subtitle: 'Quotes in under 10 seconds',
+    title: 'Genereren',
+    subtitle: 'Offertes in minder dan 10 seconden',
     description:
-      'Your sales team opens the Duneslab interface, selects products and quantities, and clicks generate. The AI engine applies all configured rules and produces a complete, accurate, client-ready quotation — in under 10 seconds.',
+      'Uw salesteam opent de Duneslab interface, selecteert producten en aantallen en klikt op genereren. De AI-engine past alle geconfigureerde regels toe en produceert een complete, accurate, klantklare offerte — in minder dan 10 seconden.',
     details: [
-      'Clean, intuitive product selection interface',
-      'Live price validation as products are selected',
-      'Multiple currency and language support',
-      'Preview mode before generating the final PDF',
+      'Overzichtelijke, intuïtieve productselectie-interface',
+      'Live prijsvalidatie bij het selecteren van producten',
+      'Ondersteuning voor meerdere valuta en talen',
+      'Voorbeeldmodus vóór het genereren van de definitieve PDF',
     ],
   },
   {
     number: '04',
     icon: Send,
-    title: 'Close',
-    subtitle: 'From quote to deal',
+    title: 'Afsluiten',
+    subtitle: 'Van offerte naar deal',
     description:
-      'Send the PDF directly from the platform with one click, or download it and attach it to your existing email workflow. Track quote status, follow-ups, and conversions from a central dashboard.',
+      'Verstuur de PDF direct vanuit het platform met één klik, of download hem en voeg hem toe aan uw bestaande e-mailworkflow. Volg de offertetstatus, follow-ups en deals vanuit een centraal dashboard.',
     details: [
-      'One-click email delivery with your own sender address',
-      'Quote status tracking (sent, opened, accepted, rejected)',
-      'Follow-up reminders and deal progression dashboard',
-      'Quote history and version control per client',
+      'Directe e-mailbezorging met uw eigen afzenderadres',
+      'Offertetstatus bijhouden (verzonden, geopend, geaccepteerd, afgewezen)',
+      'Herinneringen voor opvolging en dealprogress-dashboard',
+      'Offertegeschiedenis en versiebeheer per klant',
     ],
   },
 ]
 
 const integrations = [
   {
-    category: 'ERP Systems',
+    category: 'ERP Systemen',
     icon: Server,
     items: ['Exact Online', 'AFAS Profit', 'SAP Business One', 'Microsoft Dynamics 365'],
   },
   {
     category: 'E-commerce',
     icon: Globe,
-    items: ['WooCommerce', 'Shopify (via API)', 'Magento', 'Custom storefronts'],
+    items: ['WooCommerce', 'Shopify (via API)', 'Magento', 'Maatwerk webshops'],
   },
   {
     category: 'Databases',
@@ -91,51 +91,51 @@ const integrations = [
     items: ['MySQL / MariaDB', 'PostgreSQL', 'Microsoft SQL Server', 'SQLite'],
   },
   {
-    category: 'Custom & Other',
+    category: 'Maatwerk & Overig',
     icon: Code,
-    items: ['REST API integration', 'CSV / Excel import', 'Google Sheets sync', 'Custom connectors'],
+    items: ['REST API integratie', 'CSV / Excel import', 'Google Sheets sync', 'Maatwerk connectoren'],
   },
 ]
 
 const timeline = [
   {
     week: 'Week 1',
-    title: 'Discovery & integration',
+    title: 'Kennismaking & integratie',
     tasks: [
-      'Kick-off call to review requirements and access',
-      'System access setup (read-only credentials)',
-      'Database structure review and mapping',
-      'Initial integration build and connection test',
+      'Kick-off gesprek om vereisten en toegang te bespreken',
+      'Systeemtoegang instellen (alleen-lezen rechten)',
+      'Databasestructuur beoordelen en mappen',
+      'Eerste integratiebouw en verbindingstest',
     ],
   },
   {
     week: 'Week 2',
-    title: 'Configuration',
+    title: 'Configuratie',
     tasks: [
-      'PDF template design (based on your brand guidelines)',
-      'Pricing rules and margin logic configuration',
-      'Multi-tier discounting and client category setup',
-      'First end-to-end test with sample data',
+      'PDF-templateontwerp (op basis van uw huisstijlgids)',
+      'Prijsregels en margelogica configureren',
+      'Meervoudige kortingen en klanttiers instellen',
+      'Eerste end-to-end test met voorbeelddata',
     ],
   },
   {
     week: 'Week 3',
-    title: 'Testing & QA',
+    title: 'Testen & QA',
     tasks: [
-      'Internal testing with real product data',
-      'Feedback round with your sales team',
-      'Edge case handling (zero stock, discontinued products)',
-      'Performance and accuracy validation',
+      'Intern testen met echte productdata',
+      'Feedbackronde met uw salesteam',
+      'Randgevallen verwerken (geen voorraad, gestopte producten)',
+      'Prestatie- en nauwkeurigheidsvalidatie',
     ],
   },
   {
     week: 'Week 4',
-    title: 'Go-live & training',
+    title: 'Livegang & training',
     tasks: [
-      'Team training session (60-90 min, recorded)',
-      'Full system go-live',
-      'Monitoring period with same-day support',
-      'Handover documentation and user guide',
+      'Teamtraining (60–90 min, opgenomen)',
+      'Volledige systeemactivatie',
+      'Bewakingsperiode met ondersteuning op dezelfde dag',
+      'Overdrachts­documentatie en gebruikersgids',
     ],
   },
 ]
@@ -144,12 +144,11 @@ export default function HowItWorksPage() {
   return (
     <>
       <PageHero
-        label="How it works"
-        heading="From Database To Deal. In Seconds."
-        subtext="Four clear steps from integration to your first AI-generated quotation."
+        label="Hoe het werkt"
+        heading="Van Database Naar Deal. In Seconden."
+        subtext="Vier heldere stappen van integratie tot uw eerste AI-gegenereerde offerte."
       />
 
-      {/* 4 steps expanded */}
       <section
         className="py-24 lg:py-32 border-b border-edge"
         style={{ background: 'rgba(5,5,5,0.92)' }}
@@ -162,13 +161,12 @@ export default function HowItWorksPage() {
             viewport={{ once: true, margin: '-80px' }}
             className="space-y-5"
           >
-            {steps.map((step, i) => (
+            {steps.map((step) => (
               <motion.div
                 key={step.number}
                 variants={fadeUp}
                 className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-0 p-8 lg:p-10 border border-edge bg-surface group hover:border-gold transition-colors duration-300"
               >
-                {/* Step number + header */}
                 <div className="lg:col-span-4 flex flex-col justify-start">
                   <div className="font-display font-bold text-5xl text-gold opacity-30 group-hover:opacity-80 transition-opacity duration-300 leading-none mb-4">
                     {step.number}
@@ -184,10 +182,8 @@ export default function HowItWorksPage() {
                   </h2>
                 </div>
 
-                {/* Divider */}
                 <div className="hidden lg:block lg:col-span-1 border-l border-edge mx-auto h-full" />
 
-                {/* Description + details */}
                 <div className="lg:col-span-7 lg:pl-8">
                   <p className="text-ink-dim text-base leading-relaxed mb-6">
                     {step.description}
@@ -207,7 +203,6 @@ export default function HowItWorksPage() {
         </div>
       </section>
 
-      {/* Flow diagram */}
       <section
         className="py-24 lg:py-32 border-b border-edge"
         style={{ background: 'rgba(5,5,5,0.92)' }}
@@ -221,10 +216,10 @@ export default function HowItWorksPage() {
             className="max-w-xl mb-14"
           >
             <p className="text-gold text-xs tracking-widest uppercase font-display mb-5">
-              The flow
+              De flow
             </p>
             <h2 className="font-display font-bold text-3xl lg:text-4xl text-ink leading-tight">
-              What happens inside the engine.
+              Wat er achter de schermen gebeurt.
             </h2>
           </motion.div>
 
@@ -236,10 +231,10 @@ export default function HowItWorksPage() {
             className="flex flex-col lg:flex-row items-stretch lg:items-center justify-center gap-0"
           >
             {[
-              { icon: Database, label: 'YOUR DATABASE', desc: 'Live product & pricing data' },
-              { icon: Zap, label: 'AI ENGINE', desc: 'Rules, templates & branding', featured: true },
-              { icon: FileText, label: 'PDF OUTPUT', desc: 'Client-ready in <10 seconds' },
-              { icon: Send, label: 'CLIENT', desc: 'Delivered in one click' },
+              { icon: Database, label: 'UW DATABASE', desc: 'Live product- & prijsdata' },
+              { icon: Zap, label: 'AI ENGINE', desc: 'Regels, templates & huisstijl', featured: true },
+              { icon: FileText, label: 'PDF OUTPUT', desc: 'Klantklaar in <10 seconden' },
+              { icon: Send, label: 'KLANT', desc: 'Bezorgd met één klik' },
             ].map((node, i, arr) => (
               <div key={node.label} className="flex flex-col lg:flex-row items-center">
                 <div
@@ -281,7 +276,6 @@ export default function HowItWorksPage() {
         </div>
       </section>
 
-      {/* Integrations */}
       <section
         className="py-24 lg:py-32 border-b border-edge"
         style={{ background: 'rgba(5,5,5,0.92)' }}
@@ -295,13 +289,13 @@ export default function HowItWorksPage() {
           >
             <motion.div variants={fadeUp} className="max-w-xl mb-14">
               <p className="text-gold text-xs tracking-widest uppercase font-display mb-5">
-                Integrations
+                Integraties
               </p>
               <h2 className="font-display font-bold text-3xl lg:text-4xl text-ink leading-tight mb-4">
-                We connect to the systems you already use.
+                Wij koppelen aan de systemen die u al gebruikt.
               </h2>
               <p className="text-ink-dim text-base leading-relaxed">
-                Not on the list? We handle custom integrations on a case-by-case basis.
+                Staat uw systeem er niet bij? Wij verzorgen maatwerk integraties per geval.
               </p>
             </motion.div>
 
@@ -333,7 +327,6 @@ export default function HowItWorksPage() {
         </div>
       </section>
 
-      {/* Implementation timeline */}
       <section
         className="py-24 lg:py-32"
         style={{ background: 'rgba(5,5,5,0.92)' }}
@@ -347,14 +340,13 @@ export default function HowItWorksPage() {
           >
             <motion.div variants={fadeUp} className="max-w-xl mb-14">
               <p className="text-gold text-xs tracking-widest uppercase font-display mb-5">
-                Implementation
+                Implementatie
               </p>
               <h2 className="font-display font-bold text-3xl lg:text-4xl text-ink leading-tight mb-4">
-                Live in 4 weeks. We handle everything.
+                Live in 4 weken. Wij regelen alles.
               </h2>
               <p className="text-ink-dim text-base leading-relaxed">
-                From first call to go-live: a structured, predictable process with no
-                surprises.
+                Van eerste gesprek tot livegang: een gestructureerd, voorspelbaar proces zonder verrassingen.
               </p>
             </motion.div>
 
@@ -387,15 +379,13 @@ export default function HowItWorksPage() {
       </section>
 
       <CTAStrip
-        heading="Ready to see it in action?"
-        subtext="Book a free 30-minute demo. We'll show you the full flow live, with your type of products."
-        buttonLabel="Book a demo →"
+        heading="Klaar om het live te zien?"
+        subtext="Plan een gratis demo van 30 minuten. Wij laten u de volledige flow zien met uw type producten."
+        buttonLabel="Plan een demo →"
         buttonHref="/contact"
-        secondaryLabel="View pricing"
+        secondaryLabel="Bekijk prijzen"
         secondaryHref="/pricing"
       />
     </>
   )
 }
-
-

@@ -1,4 +1,4 @@
-﻿'use client'
+'use client'
 
 import { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
@@ -16,34 +16,34 @@ const stagger = {
 
 const faqs = [
   {
-    question: 'What systems can you integrate with?',
+    question: 'Met welke systemen kunt u integreren?',
     answer:
-      'Duneslab integrates with most common ERP and database systems including SAP, Microsoft Dynamics, Exact, Salesforce and custom SQL databases. If you use a different system, reach out — we handle custom integrations on a case-by-case basis.',
+      'Duneslab integreert met de meeste gangbare ERP- en databasesystemen, waaronder SAP, Microsoft Dynamics, Exact, Salesforce en custom SQL-databases. Gebruikt u een ander systeem? Neem contact op — wij verzorgen maatwerk integraties per geval.',
   },
   {
-    question: 'How long does implementation take?',
+    question: 'Hoe lang duurt de implementatie?',
     answer:
-      'Most clients are fully operational within 2 to 4 weeks. This includes integration, configuration of templates and pricing logic, team training and a full QA round. We handle the entire onboarding process.',
+      'De meeste klanten zijn volledig operationeel binnen 2 tot 4 weken. Dit omvat integratie, configuratie van templates en prijslogica, teamtraining en een volledige QA-ronde. Wij verzorgen het volledige onboardingtraject.',
   },
   {
-    question: 'Is my data secure?',
+    question: 'Is mijn data veilig?',
     answer:
-      'Yes. All data is processed and stored in compliance with GDPR. We do not share or sell client data. Enterprise plans include a data processing agreement (DPA) and can be configured with on-premise deployment options.',
+      'Ja. Alle data wordt verwerkt en opgeslagen in overeenstemming met de AVG (GDPR). Wij delen of verkopen geen klantdata. Enterprise-abonnementen omvatten een verwerkersovereenkomst (DPA) en kunnen worden geconfigureerd met on-premise implementatieopties.',
   },
   {
-    question: 'Can I cancel anytime?',
+    question: 'Kan ik op elk moment opzeggen?',
     answer:
-      'Our standard contracts have a minimum term of 12 months. After that, you can cancel with 30 days notice. We are transparent about this upfront — no lock-ins beyond the initial term.',
+      'Onze standaard contracten hebben een minimale looptijd van 12 maanden. Daarna kunt u opzeggen met een opzegtermijn van 30 dagen. Wij zijn hierover transparant van het begin — geen verborgen bindingen na de initiële contractperiode.',
   },
   {
-    question: 'Do you offer a demo?',
+    question: 'Biedt u een demo aan?',
     answer:
-      'Absolutely. We offer a free 30-minute demo where we walk you through the platform live, answer your questions and assess whether it is a fit for your workflow. Use the button above to book your slot.',
+      'Absoluut. Wij bieden een gratis demo van 30 minuten waarbij wij u live door het platform leiden, uw vragen beantwoorden en beoordelen of het een goede match is voor uw workflow. Gebruik de knop hierboven om uw afspraak in te plannen.',
   },
   {
-    question: 'What makes Duneslab different from other tools?',
+    question: 'Wat maakt Duneslab anders dan andere tools?',
     answer:
-      'Most tools are generic. Duneslab is built specifically for B2B quotation workflows and is fully configured around your product database, pricing logic and brand. You get a custom solution, not a template you need to bend into shape.',
+      'De meeste tools zijn generiek. Duneslab is specifiek gebouwd voor B2B offerteprocessen en volledig geconfigureerd rondom uw productdatabase, prijslogica en huisstijl. U krijgt een oplossing op maat — geen template die u zelf moet ombuigen.',
   },
 ]
 
@@ -107,7 +107,6 @@ export default function FAQ() {
     >
       <div className="max-w-7xl mx-auto px-6 lg:px-12">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20">
-          {/* Left: heading */}
           <motion.div
             initial={{ opacity: 0, y: 32 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -119,10 +118,10 @@ export default function FAQ() {
               FAQ
             </p>
             <h2 className="font-display font-bold text-4xl lg:text-5xl text-ink leading-tight mb-6">
-              Common questions.
+              Veelgestelde vragen.
             </h2>
             <p className="text-ink-dim text-base leading-relaxed mb-8">
-              Not finding what you need? Email us directly at{' '}
+              Staat uw vraag er niet bij? Mail ons direct via{' '}
               <a
                 href="mailto:marijn@duneslab.nl"
                 className="text-gold hover:text-gold-bright transition-colors"
@@ -132,7 +131,6 @@ export default function FAQ() {
             </p>
           </motion.div>
 
-          {/* Right: accordion */}
           <motion.div
             variants={stagger}
             initial="hidden"
@@ -155,5 +153,3 @@ export default function FAQ() {
     </section>
   )
 }
-
-
